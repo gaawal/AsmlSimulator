@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "cd asml-twinscan-web && npm ci",
+  "buildCommand": "cd asml-twinscan-web && npm run build",
+  "outputDirectory": "asml-twinscan-web/dist"
+}

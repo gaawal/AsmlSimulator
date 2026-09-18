@@ -1,0 +1,9 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+*.log
+artifacts/tmp/
+
+# 工作区元数据（含本机环境笔记），不入库
+.workbuddy/

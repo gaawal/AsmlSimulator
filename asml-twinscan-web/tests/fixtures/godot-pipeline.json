@@ -1,0 +1,3709 @@
+{
+ "engine": "4.7.2-stable (official)",
+ "runs": [
+  {
+   "batch": 1,
+   "completed_ids": [
+    1
+   ],
+   "elapsed_s": 48.9999999999991,
+   "events": [
+    {
+     "actor": "",
+     "time": 0.0,
+     "type": "pipeline_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "",
+     "time": 4,
+     "type": "vacuum_ready",
+     "wafer_id": 0
+    },
+    {
+     "actor": "",
+     "time": 9,
+     "type": "homing_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 9.0,
+     "type": "wafer_loading",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 13.5,
+     "type": "wafer_loaded",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 16.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 21.0,
+     "type": "wafer_measured",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 21.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 25.0,
+     "type": "exposure_started",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 25.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 41.0,
+     "type": "wafer_exposed",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 41.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 45.0,
+     "type": "unload_started",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 45.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 49.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 49.0,
+     "type": "batch_complete",
+     "wafer_id": 0
+    }
+   ],
+   "exchange_count": 2,
+   "samples": [
+    {
+     "phase": "pump",
+     "stages": {
+      "A": {
+       "action": "pump",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "pump",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 0.0
+    },
+    {
+     "phase": "homing",
+     "stages": {
+      "A": {
+       "action": "homing",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "homing",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 4.99999999999999
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 9.00000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 13.5000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 16.5000000000001
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 21.0000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "done",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 25.0000000000001
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 40.9999999999996
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 44.9999999999994
+    }
+   ]
+  },
+  {
+   "batch": 2,
+   "completed_ids": [
+    1,
+    2
+   ],
+   "elapsed_s": 68.9999999999981,
+   "events": [
+    {
+     "actor": "",
+     "time": 0.0,
+     "type": "pipeline_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "",
+     "time": 4,
+     "type": "vacuum_ready",
+     "wafer_id": 0
+    },
+    {
+     "actor": "",
+     "time": 9,
+     "type": "homing_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 9.0,
+     "type": "wafer_loading",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 13.5,
+     "type": "wafer_loaded",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 16.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 21.0,
+     "type": "wafer_measured",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 21.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 25.0,
+     "type": "exposure_started",
+     "wafer_id": 1
+    },
+    {
+     "actor": "B",
+     "time": 25.0,
+     "type": "wafer_loading",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 25.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 29.5,
+     "type": "wafer_loaded",
+     "wafer_id": 2
+    },
+    {
+     "actor": "B",
+     "time": 32.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 2
+    },
+    {
+     "actor": "B",
+     "time": 37.0,
+     "type": "wafer_measured",
+     "wafer_id": 2
+    },
+    {
+     "actor": "A",
+     "time": 41.0,
+     "type": "wafer_exposed",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 41.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 45.0,
+     "type": "unload_started",
+     "wafer_id": 1
+    },
+    {
+     "actor": "B",
+     "time": 45.0,
+     "type": "exposure_started",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 45.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 49.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 1
+    },
+    {
+     "actor": "B",
+     "time": 61.0,
+     "type": "wafer_exposed",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 61.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 65.0,
+     "type": "unload_started",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 65.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 69.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 69.0,
+     "type": "batch_complete",
+     "wafer_id": 0
+    }
+   ],
+   "exchange_count": 3,
+   "samples": [
+    {
+     "phase": "pump",
+     "stages": {
+      "A": {
+       "action": "pump",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "pump",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 0.0
+    },
+    {
+     "phase": "homing",
+     "stages": {
+      "A": {
+       "action": "homing",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "homing",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 4.99999999999999
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 9.00000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 13.5000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 16.5000000000001
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 21.0000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "loading"
+      }
+     },
+     "time": 25.0000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 29.5000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 32.5000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "wait",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 36.9999999999998
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 40.9999999999996
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 44.9999999999994
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "done",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 48.9999999999991
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 60.9999999999985
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 64.9999999999983
+    }
+   ]
+  },
+  {
+   "batch": 6,
+   "completed_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "elapsed_s": 149.000000000002,
+   "events": [
+    {
+     "actor": "",
+     "time": 0.0,
+     "type": "pipeline_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "",
+     "time": 4,
+     "type": "vacuum_ready",
+     "wafer_id": 0
+    },
+    {
+     "actor": "",
+     "time": 9,
+     "type": "homing_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 9.0,
+     "type": "wafer_loading",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 13.5,
+     "type": "wafer_loaded",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 16.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 21.0,
+     "type": "wafer_measured",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 21.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 25.0,
+     "type": "exposure_started",
+     "wafer_id": 1
+    },
+    {
+     "actor": "B",
+     "time": 25.0,
+     "type": "wafer_loading",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 25.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 29.5,
+     "type": "wafer_loaded",
+     "wafer_id": 2
+    },
+    {
+     "actor": "B",
+     "time": 32.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 2
+    },
+    {
+     "actor": "B",
+     "time": 37.0,
+     "type": "wafer_measured",
+     "wafer_id": 2
+    },
+    {
+     "actor": "A",
+     "time": 41.0,
+     "type": "wafer_exposed",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 41.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 45.0,
+     "type": "unload_started",
+     "wafer_id": 1
+    },
+    {
+     "actor": "B",
+     "time": 45.0,
+     "type": "exposure_started",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 45.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 49.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 49.0,
+     "type": "wafer_loading",
+     "wafer_id": 3
+    },
+    {
+     "actor": "A",
+     "time": 53.5,
+     "type": "wafer_loaded",
+     "wafer_id": 3
+    },
+    {
+     "actor": "A",
+     "time": 56.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 3
+    },
+    {
+     "actor": "A",
+     "time": 61.0,
+     "type": "wafer_measured",
+     "wafer_id": 3
+    },
+    {
+     "actor": "B",
+     "time": 61.0,
+     "type": "wafer_exposed",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 61.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 65.0,
+     "type": "exposure_started",
+     "wafer_id": 3
+    },
+    {
+     "actor": "B",
+     "time": 65.0,
+     "type": "unload_started",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 65.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 69.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 2
+    },
+    {
+     "actor": "B",
+     "time": 69.0,
+     "type": "wafer_loading",
+     "wafer_id": 4
+    },
+    {
+     "actor": "B",
+     "time": 73.5,
+     "type": "wafer_loaded",
+     "wafer_id": 4
+    },
+    {
+     "actor": "B",
+     "time": 76.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 4
+    },
+    {
+     "actor": "A",
+     "time": 81.0,
+     "type": "wafer_exposed",
+     "wafer_id": 3
+    },
+    {
+     "actor": "B",
+     "time": 81.0,
+     "type": "wafer_measured",
+     "wafer_id": 4
+    },
+    {
+     "actor": "",
+     "time": 81.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 85.0,
+     "type": "unload_started",
+     "wafer_id": 3
+    },
+    {
+     "actor": "B",
+     "time": 85.0,
+     "type": "exposure_started",
+     "wafer_id": 4
+    },
+    {
+     "actor": "",
+     "time": 85.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 89.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 3
+    },
+    {
+     "actor": "A",
+     "time": 89.0,
+     "type": "wafer_loading",
+     "wafer_id": 5
+    },
+    {
+     "actor": "A",
+     "time": 93.5,
+     "type": "wafer_loaded",
+     "wafer_id": 5
+    },
+    {
+     "actor": "A",
+     "time": 96.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 5
+    },
+    {
+     "actor": "A",
+     "time": 101.0,
+     "type": "wafer_measured",
+     "wafer_id": 5
+    },
+    {
+     "actor": "B",
+     "time": 101.0,
+     "type": "wafer_exposed",
+     "wafer_id": 4
+    },
+    {
+     "actor": "",
+     "time": 101.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 105.0,
+     "type": "exposure_started",
+     "wafer_id": 5
+    },
+    {
+     "actor": "B",
+     "time": 105.0,
+     "type": "unload_started",
+     "wafer_id": 4
+    },
+    {
+     "actor": "",
+     "time": 105.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 109.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 4
+    },
+    {
+     "actor": "B",
+     "time": 109.0,
+     "type": "wafer_loading",
+     "wafer_id": 6
+    },
+    {
+     "actor": "B",
+     "time": 113.5,
+     "type": "wafer_loaded",
+     "wafer_id": 6
+    },
+    {
+     "actor": "B",
+     "time": 116.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 6
+    },
+    {
+     "actor": "A",
+     "time": 121.0,
+     "type": "wafer_exposed",
+     "wafer_id": 5
+    },
+    {
+     "actor": "B",
+     "time": 121.0,
+     "type": "wafer_measured",
+     "wafer_id": 6
+    },
+    {
+     "actor": "",
+     "time": 121.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 125.0,
+     "type": "unload_started",
+     "wafer_id": 5
+    },
+    {
+     "actor": "B",
+     "time": 125.0,
+     "type": "exposure_started",
+     "wafer_id": 6
+    },
+    {
+     "actor": "",
+     "time": 125.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 129.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 5
+    },
+    {
+     "actor": "B",
+     "time": 141.0,
+     "type": "wafer_exposed",
+     "wafer_id": 6
+    },
+    {
+     "actor": "",
+     "time": 141.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 145.0,
+     "type": "unload_started",
+     "wafer_id": 6
+    },
+    {
+     "actor": "",
+     "time": 145.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 149.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 6
+    },
+    {
+     "actor": "",
+     "time": 149.0,
+     "type": "batch_complete",
+     "wafer_id": 0
+    }
+   ],
+   "exchange_count": 7,
+   "samples": [
+    {
+     "phase": "pump",
+     "stages": {
+      "A": {
+       "action": "pump",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "pump",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 0.0
+    },
+    {
+     "phase": "homing",
+     "stages": {
+      "A": {
+       "action": "homing",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "homing",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 4.99999999999999
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 9.00000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 13.5000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 16.5000000000001
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 21.0000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "loading"
+      }
+     },
+     "time": 25.0000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 29.5000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 32.5000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "wait",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 36.9999999999998
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 40.9999999999996
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 44.9999999999994
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 3,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 48.9999999999991
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 3,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 53.4999999999989
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 3,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 56.4999999999987
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 3,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 60.9999999999985
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 3,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 64.9999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 3,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 4,
+       "wafer_state": "loading"
+      }
+     },
+     "time": 68.9999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 3,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 4,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 73.4999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 3,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 4,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 76.4999999999983
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 3,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 4,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 80.9999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 3,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 4,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 84.9999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 5,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 4,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 88.9999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 5,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 4,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 93.4999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 5,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 4,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 96.4999999999983
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 5,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 4,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 100.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 5,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 4,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 104.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 5,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 6,
+       "wafer_state": "loading"
+      }
+     },
+     "time": 108.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 5,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 6,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 113.499999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 5,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 6,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 116.499999999998
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 5,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 6,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 120.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 5,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 6,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 124.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "done",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 6,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 128.999999999998
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 6,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 141.000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 6,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 145.000000000002
+    }
+   ]
+  },
+  {
+   "batch": 12,
+   "completed_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "elapsed_s": 269.000000000026,
+   "events": [
+    {
+     "actor": "",
+     "time": 0.0,
+     "type": "pipeline_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "",
+     "time": 4,
+     "type": "vacuum_ready",
+     "wafer_id": 0
+    },
+    {
+     "actor": "",
+     "time": 9,
+     "type": "homing_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 9.0,
+     "type": "wafer_loading",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 13.5,
+     "type": "wafer_loaded",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 16.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 21.0,
+     "type": "wafer_measured",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 21.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 25.0,
+     "type": "exposure_started",
+     "wafer_id": 1
+    },
+    {
+     "actor": "B",
+     "time": 25.0,
+     "type": "wafer_loading",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 25.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 29.5,
+     "type": "wafer_loaded",
+     "wafer_id": 2
+    },
+    {
+     "actor": "B",
+     "time": 32.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 2
+    },
+    {
+     "actor": "B",
+     "time": 37.0,
+     "type": "wafer_measured",
+     "wafer_id": 2
+    },
+    {
+     "actor": "A",
+     "time": 41.0,
+     "type": "wafer_exposed",
+     "wafer_id": 1
+    },
+    {
+     "actor": "",
+     "time": 41.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 45.0,
+     "type": "unload_started",
+     "wafer_id": 1
+    },
+    {
+     "actor": "B",
+     "time": 45.0,
+     "type": "exposure_started",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 45.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 49.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 1
+    },
+    {
+     "actor": "A",
+     "time": 49.0,
+     "type": "wafer_loading",
+     "wafer_id": 3
+    },
+    {
+     "actor": "A",
+     "time": 53.5,
+     "type": "wafer_loaded",
+     "wafer_id": 3
+    },
+    {
+     "actor": "A",
+     "time": 56.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 3
+    },
+    {
+     "actor": "A",
+     "time": 61.0,
+     "type": "wafer_measured",
+     "wafer_id": 3
+    },
+    {
+     "actor": "B",
+     "time": 61.0,
+     "type": "wafer_exposed",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 61.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 65.0,
+     "type": "exposure_started",
+     "wafer_id": 3
+    },
+    {
+     "actor": "B",
+     "time": 65.0,
+     "type": "unload_started",
+     "wafer_id": 2
+    },
+    {
+     "actor": "",
+     "time": 65.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 69.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 2
+    },
+    {
+     "actor": "B",
+     "time": 69.0,
+     "type": "wafer_loading",
+     "wafer_id": 4
+    },
+    {
+     "actor": "B",
+     "time": 73.5,
+     "type": "wafer_loaded",
+     "wafer_id": 4
+    },
+    {
+     "actor": "B",
+     "time": 76.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 4
+    },
+    {
+     "actor": "A",
+     "time": 81.0,
+     "type": "wafer_exposed",
+     "wafer_id": 3
+    },
+    {
+     "actor": "B",
+     "time": 81.0,
+     "type": "wafer_measured",
+     "wafer_id": 4
+    },
+    {
+     "actor": "",
+     "time": 81.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 85.0,
+     "type": "unload_started",
+     "wafer_id": 3
+    },
+    {
+     "actor": "B",
+     "time": 85.0,
+     "type": "exposure_started",
+     "wafer_id": 4
+    },
+    {
+     "actor": "",
+     "time": 85.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 89.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 3
+    },
+    {
+     "actor": "A",
+     "time": 89.0,
+     "type": "wafer_loading",
+     "wafer_id": 5
+    },
+    {
+     "actor": "A",
+     "time": 93.5,
+     "type": "wafer_loaded",
+     "wafer_id": 5
+    },
+    {
+     "actor": "A",
+     "time": 96.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 5
+    },
+    {
+     "actor": "A",
+     "time": 101.0,
+     "type": "wafer_measured",
+     "wafer_id": 5
+    },
+    {
+     "actor": "B",
+     "time": 101.0,
+     "type": "wafer_exposed",
+     "wafer_id": 4
+    },
+    {
+     "actor": "",
+     "time": 101.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 105.0,
+     "type": "exposure_started",
+     "wafer_id": 5
+    },
+    {
+     "actor": "B",
+     "time": 105.0,
+     "type": "unload_started",
+     "wafer_id": 4
+    },
+    {
+     "actor": "",
+     "time": 105.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 109.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 4
+    },
+    {
+     "actor": "B",
+     "time": 109.0,
+     "type": "wafer_loading",
+     "wafer_id": 6
+    },
+    {
+     "actor": "B",
+     "time": 113.5,
+     "type": "wafer_loaded",
+     "wafer_id": 6
+    },
+    {
+     "actor": "B",
+     "time": 116.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 6
+    },
+    {
+     "actor": "A",
+     "time": 121.0,
+     "type": "wafer_exposed",
+     "wafer_id": 5
+    },
+    {
+     "actor": "B",
+     "time": 121.0,
+     "type": "wafer_measured",
+     "wafer_id": 6
+    },
+    {
+     "actor": "",
+     "time": 121.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 125.0,
+     "type": "unload_started",
+     "wafer_id": 5
+    },
+    {
+     "actor": "B",
+     "time": 125.0,
+     "type": "exposure_started",
+     "wafer_id": 6
+    },
+    {
+     "actor": "",
+     "time": 125.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 129.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 5
+    },
+    {
+     "actor": "A",
+     "time": 129.0,
+     "type": "wafer_loading",
+     "wafer_id": 7
+    },
+    {
+     "actor": "A",
+     "time": 133.5,
+     "type": "wafer_loaded",
+     "wafer_id": 7
+    },
+    {
+     "actor": "A",
+     "time": 136.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 7
+    },
+    {
+     "actor": "A",
+     "time": 141.0,
+     "type": "wafer_measured",
+     "wafer_id": 7
+    },
+    {
+     "actor": "B",
+     "time": 141.0,
+     "type": "wafer_exposed",
+     "wafer_id": 6
+    },
+    {
+     "actor": "",
+     "time": 141.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 145.0,
+     "type": "exposure_started",
+     "wafer_id": 7
+    },
+    {
+     "actor": "B",
+     "time": 145.0,
+     "type": "unload_started",
+     "wafer_id": 6
+    },
+    {
+     "actor": "",
+     "time": 145.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 149.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 6
+    },
+    {
+     "actor": "B",
+     "time": 149.0,
+     "type": "wafer_loading",
+     "wafer_id": 8
+    },
+    {
+     "actor": "B",
+     "time": 153.5,
+     "type": "wafer_loaded",
+     "wafer_id": 8
+    },
+    {
+     "actor": "B",
+     "time": 156.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 8
+    },
+    {
+     "actor": "A",
+     "time": 161.0,
+     "type": "wafer_exposed",
+     "wafer_id": 7
+    },
+    {
+     "actor": "B",
+     "time": 161.0,
+     "type": "wafer_measured",
+     "wafer_id": 8
+    },
+    {
+     "actor": "",
+     "time": 161.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 165.0,
+     "type": "unload_started",
+     "wafer_id": 7
+    },
+    {
+     "actor": "B",
+     "time": 165.0,
+     "type": "exposure_started",
+     "wafer_id": 8
+    },
+    {
+     "actor": "",
+     "time": 165.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 169.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 7
+    },
+    {
+     "actor": "A",
+     "time": 169.0,
+     "type": "wafer_loading",
+     "wafer_id": 9
+    },
+    {
+     "actor": "A",
+     "time": 173.5,
+     "type": "wafer_loaded",
+     "wafer_id": 9
+    },
+    {
+     "actor": "A",
+     "time": 176.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 9
+    },
+    {
+     "actor": "A",
+     "time": 181.0,
+     "type": "wafer_measured",
+     "wafer_id": 9
+    },
+    {
+     "actor": "B",
+     "time": 181.0,
+     "type": "wafer_exposed",
+     "wafer_id": 8
+    },
+    {
+     "actor": "",
+     "time": 181.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 185.0,
+     "type": "exposure_started",
+     "wafer_id": 9
+    },
+    {
+     "actor": "B",
+     "time": 185.0,
+     "type": "unload_started",
+     "wafer_id": 8
+    },
+    {
+     "actor": "",
+     "time": 185.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 189.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 8
+    },
+    {
+     "actor": "B",
+     "time": 189.0,
+     "type": "wafer_loading",
+     "wafer_id": 10
+    },
+    {
+     "actor": "B",
+     "time": 193.5,
+     "type": "wafer_loaded",
+     "wafer_id": 10
+    },
+    {
+     "actor": "B",
+     "time": 196.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 10
+    },
+    {
+     "actor": "A",
+     "time": 201.0,
+     "type": "wafer_exposed",
+     "wafer_id": 9
+    },
+    {
+     "actor": "B",
+     "time": 201.0,
+     "type": "wafer_measured",
+     "wafer_id": 10
+    },
+    {
+     "actor": "",
+     "time": 201.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 205.0,
+     "type": "unload_started",
+     "wafer_id": 9
+    },
+    {
+     "actor": "B",
+     "time": 205.0,
+     "type": "exposure_started",
+     "wafer_id": 10
+    },
+    {
+     "actor": "",
+     "time": 205.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 209.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 9
+    },
+    {
+     "actor": "A",
+     "time": 209.0,
+     "type": "wafer_loading",
+     "wafer_id": 11
+    },
+    {
+     "actor": "A",
+     "time": 213.5,
+     "type": "wafer_loaded",
+     "wafer_id": 11
+    },
+    {
+     "actor": "A",
+     "time": 216.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 11
+    },
+    {
+     "actor": "A",
+     "time": 221.0,
+     "type": "wafer_measured",
+     "wafer_id": 11
+    },
+    {
+     "actor": "B",
+     "time": 221.0,
+     "type": "wafer_exposed",
+     "wafer_id": 10
+    },
+    {
+     "actor": "",
+     "time": 221.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 225.0,
+     "type": "exposure_started",
+     "wafer_id": 11
+    },
+    {
+     "actor": "B",
+     "time": 225.0,
+     "type": "unload_started",
+     "wafer_id": 10
+    },
+    {
+     "actor": "",
+     "time": 225.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 229.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 10
+    },
+    {
+     "actor": "B",
+     "time": 229.0,
+     "type": "wafer_loading",
+     "wafer_id": 12
+    },
+    {
+     "actor": "B",
+     "time": 233.5,
+     "type": "wafer_loaded",
+     "wafer_id": 12
+    },
+    {
+     "actor": "B",
+     "time": 236.5,
+     "type": "wafer_prealigned",
+     "wafer_id": 12
+    },
+    {
+     "actor": "A",
+     "time": 241.0,
+     "type": "wafer_exposed",
+     "wafer_id": 11
+    },
+    {
+     "actor": "B",
+     "time": 241.0,
+     "type": "wafer_measured",
+     "wafer_id": 12
+    },
+    {
+     "actor": "",
+     "time": 241.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 245.0,
+     "type": "unload_started",
+     "wafer_id": 11
+    },
+    {
+     "actor": "B",
+     "time": 245.0,
+     "type": "exposure_started",
+     "wafer_id": 12
+    },
+    {
+     "actor": "",
+     "time": 245.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "A",
+     "time": 249.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 11
+    },
+    {
+     "actor": "B",
+     "time": 261.0,
+     "type": "wafer_exposed",
+     "wafer_id": 12
+    },
+    {
+     "actor": "",
+     "time": 261.0,
+     "type": "exchange_started",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 265.0,
+     "type": "unload_started",
+     "wafer_id": 12
+    },
+    {
+     "actor": "",
+     "time": 265.0,
+     "type": "exchange_completed",
+     "wafer_id": 0
+    },
+    {
+     "actor": "B",
+     "time": 269.0,
+     "type": "wafer_unloaded",
+     "wafer_id": 12
+    },
+    {
+     "actor": "",
+     "time": 269.0,
+     "type": "batch_complete",
+     "wafer_id": 0
+    }
+   ],
+   "exchange_count": 13,
+   "samples": [
+    {
+     "phase": "pump",
+     "stages": {
+      "A": {
+       "action": "pump",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "pump",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 0.0
+    },
+    {
+     "phase": "homing",
+     "stages": {
+      "A": {
+       "action": "homing",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "homing",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 4.99999999999999
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 9.00000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 13.5000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 16.5000000000001
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      }
+     },
+     "time": 21.0000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "loading"
+      }
+     },
+     "time": 25.0000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 29.5000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 32.5000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "wait",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 36.9999999999998
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 1,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 40.9999999999996
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 1,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 44.9999999999994
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 3,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 48.9999999999991
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 3,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 53.4999999999989
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 3,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 56.4999999999987
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 3,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 2,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 60.9999999999985
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 3,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 2,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 64.9999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 3,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 4,
+       "wafer_state": "loading"
+      }
+     },
+     "time": 68.9999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 3,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 4,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 73.4999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 3,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 4,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 76.4999999999983
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 3,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 4,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 80.9999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 3,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 4,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 84.9999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 5,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 4,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 88.9999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 5,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 4,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 93.4999999999983
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 5,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 4,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 96.4999999999983
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 5,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 4,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 100.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 5,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 4,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 104.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 5,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 6,
+       "wafer_state": "loading"
+      }
+     },
+     "time": 108.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 5,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 6,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 113.499999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 5,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 6,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 116.499999999998
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 5,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 6,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 120.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 5,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 6,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 124.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 7,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 6,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 128.999999999998
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 7,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 6,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 133.499999999999
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 7,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 6,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 136.5
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 7,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 6,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 141.000000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 7,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 6,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 145.000000000002
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 7,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 8,
+       "wafer_state": "loading"
+      }
+     },
+     "time": 149.000000000003
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 7,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 8,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 153.500000000004
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 7,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 8,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 156.500000000005
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 7,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 8,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 161.000000000006
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 7,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 8,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 165.000000000007
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 9,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 8,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 169.000000000008
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 9,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 8,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 173.500000000009
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 9,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 8,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 176.500000000009
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 9,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 8,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 181.00000000001
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 9,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 8,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 185.000000000011
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 9,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 10,
+       "wafer_state": "loading"
+      }
+     },
+     "time": 189.000000000012
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 9,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 10,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 193.500000000013
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 9,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 10,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 196.500000000014
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 9,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 10,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 201.000000000015
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 9,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 10,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 205.000000000016
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 11,
+       "wafer_state": "loading"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 10,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 209.000000000017
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 11,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 10,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 213.500000000018
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 11,
+       "wafer_state": "loaded"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 10,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 216.500000000018
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 11,
+       "wafer_state": "measured"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 10,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 221.000000000019
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 11,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 10,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 225.00000000002
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 11,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "load",
+       "station": "measurement",
+       "wafer_id": 12,
+       "wafer_state": "loading"
+      }
+     },
+     "time": 229.000000000021
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 11,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "prealign",
+       "station": "measurement",
+       "wafer_id": 12,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 233.500000000022
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 11,
+       "wafer_state": "exposing"
+      },
+      "B": {
+       "action": "measure",
+       "station": "measurement",
+       "wafer_id": 12,
+       "wafer_state": "loaded"
+      }
+     },
+     "time": 236.500000000023
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 11,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 12,
+       "wafer_state": "measured"
+      }
+     },
+     "time": 241.000000000024
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 11,
+       "wafer_state": "exposed"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 12,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 245.000000000025
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "done",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "expose",
+       "station": "exposure",
+       "wafer_id": 12,
+       "wafer_state": "exposing"
+      }
+     },
+     "time": 249.000000000026
+    },
+    {
+     "phase": "exchange",
+     "stages": {
+      "A": {
+       "action": "exchange",
+       "station": "measurement",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "exchange",
+       "station": "exposure",
+       "wafer_id": 12,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 261.000000000027
+    },
+    {
+     "phase": "pipeline",
+     "stages": {
+      "A": {
+       "action": "idle",
+       "station": "exposure",
+       "wafer_id": 0,
+       "wafer_state": "empty"
+      },
+      "B": {
+       "action": "unload",
+       "station": "measurement",
+       "wafer_id": 12,
+       "wafer_state": "exposed"
+      }
+     },
+     "time": 265.000000000027
+    }
+   ]
+  }
+ ],
+ "sampling_interval_s": 0.125,
+ "source": "scripts/simulation/dual_stage_pipeline.gd",
+ "startup_order_note": "本基准源自 Godot 4.7.2 导出流程；web 版按物理顺序修正了启动时序：先建立工作真空（vacuum_ready @4s）再做系统归零校准（homing_completed @9s），其余阶段、动作、时间戳与 Godot 基准完全一致。"
+}

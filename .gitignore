@@ -1,0 +1,7 @@
+# 本仓库只收录网页版模拟器（asml-twinscan-web/）。
+# 根目录下其余的 Godot 工程文件仍保留在本地磁盘，但不再入库。
+/*
+!/.gitignore
+!/asml-twinscan-web/
+# Vercel 的根级兜底配置：万一 Root Directory 没设成 asml-twinscan-web，也能直接构建成功。
+!/vercel.json

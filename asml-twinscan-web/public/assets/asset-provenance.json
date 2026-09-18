@@ -1,0 +1,31 @@
+{
+  "asset_id": "cf_euv_trainer",
+  "part_count": 126,
+  "copied": [
+    {
+      "source": "assets/models/euv_training_machine.glb",
+      "file": "assets/models/euv_training_machine.glb",
+      "bytes": 7611672,
+      "sha256": "677193e4edf3b35d1174dfe634a821f1fedff11021e98be5a1966c9647b69d19"
+    },
+    {
+      "source": "assets/models/parts_manifest.json",
+      "file": "assets/models/parts_manifest.json",
+      "bytes": 204397,
+      "sha256": "6f3b8097d4129aee6fc680113815cfcd93580fa1ae00975d78fbca9403181a30"
+    },
+    {
+      "source": "assets/branding/asml_logo_source.svg",
+      "file": "assets/branding/asml_logo_source.svg",
+      "bytes": 1034,
+      "sha256": "28870ce471863810f0b8d1078581a4f16562f9e73c25484f65d8f127a782da04"
+    },
+    {
+      "source": "assets/branding/asml_logo_source.svg",
+      "file": "assets/branding/asml_logo.svg",
+      "bytes": 1034,
+      "sha256": "28870ce471863810f0b8d1078581a4f16562f9e73c25484f65d8f127a782da04"
+    }
+  ],
+  "notice": "Unmodified Blender GLB and parts manifest copied from the native project. Internal layout and purple EUV visualization are educational."
+}

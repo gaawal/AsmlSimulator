@@ -1,0 +1,8064 @@
+{
+  "schema_version": 1,
+  "asset_id": "cf_euv_trainer",
+  "units": "meter",
+  "coordinate_system": "godot_y_up",
+  "educational_notice": "虚构 EUV 教学机。依据用户视频可见的宽扁开放机架、双工位晶圆台、折返反射镜腔、左侧搬运和右侧真空服务结构，以及公开的锡滴光源、反射式光学/掩模和真空原理；未见的内部布局、尺寸、支架、曲率和连接均为教学示意，非商用机型复刻。EUV 不可见，模型不将紫色教学光路当作真实发光材料。",
+  "video_reference": {
+    "file_sha256": "d9e391e52d8e826131a26e7c174df320604b99b7214ac6e956beff42c43763e8",
+    "shape_basis": "user_supplied_video"
+  },
+  "education_optics": {
+    "schema_version": 1,
+    "coordinate_system": "godot_y_up",
+    "ray_points": [
+      {
+        "part_id": "source_collector",
+        "point": [
+          -3.45000005,
+          1.77999997,
+          0.121
+        ],
+        "normal": [
+          -0.0,
+          -0.0,
+          1.0
+        ],
+        "beam_width_m": 0.15,
+        "exact_reflection": false
+      },
+      {
+        "part_id": "illumination_field_mirror",
+        "point": [
+          -1.54999995,
+          2.64243484,
+          0.03043576
+        ],
+        "normal": [
+          -0.0,
+          -0.14834046,
+          0.98893636
+        ],
+        "beam_width_m": 0.18,
+        "exact_reflection": false
+      },
+      {
+        "part_id": "illumination_pupil_mirror",
+        "point": [
+          -1.0,
+          2.46000195,
+          -0.2499904
+        ],
+        "normal": [
+          -0.0,
+          0.19611613,
+          0.98058069
+        ],
+        "beam_width_m": 0.18,
+        "exact_reflection": false
+      },
+      {
+        "part_id": "reticle_mask",
+        "point": [
+          1.4,
+          3.36,
+          -0.13
+        ],
+        "normal": [
+          -0.07544398,
+          -0.98640692,
+          0.14597778
+        ],
+        "beam_width_m": 0.14,
+        "exact_reflection": true
+      },
+      {
+        "part_id": "projection_mirror_1",
+        "point": [
+          1.82,
+          3.14,
+          -0.05
+        ],
+        "normal": [
+          -0.79631132,
+          -0.60418016,
+          -0.02923422
+        ],
+        "beam_width_m": 0.22,
+        "exact_reflection": true
+      },
+      {
+        "part_id": "projection_mirror_2",
+        "point": [
+          2.1,
+          1.77,
+          0.15
+        ],
+        "normal": [
+          -0.48874921,
+          0.86426574,
+          -0.11903351
+        ],
+        "beam_width_m": 0.31,
+        "exact_reflection": true
+      },
+      {
+        "part_id": "projection_mirror_3",
+        "point": [
+          0.55,
+          3.2,
+          -0.03
+        ],
+        "normal": [
+          0.04562274,
+          -0.99032164,
+          0.13107842
+        ],
+        "beam_width_m": 0.36,
+        "exact_reflection": true
+      },
+      {
+        "part_id": "projection_mirror_4",
+        "point": [
+          -0.3,
+          2.26,
+          0.1
+        ],
+        "normal": [
+          0.07627244,
+          0.99703288,
+          0.01038194
+        ],
+        "beam_width_m": 0.32,
+        "exact_reflection": true
+      },
+      {
+        "part_id": "projection_mirror_5",
+        "point": [
+          -0.67,
+          2.82,
+          0.18
+        ],
+        "normal": [
+          0.65600121,
+          -0.75465238,
+          -0.01273315
+        ],
+        "beam_width_m": 0.28,
+        "exact_reflection": true
+      },
+      {
+        "part_id": "projection_mirror_6",
+        "point": [
+          0.45,
+          1.83,
+          0.32
+        ],
+        "normal": [
+          0.14753434,
+          0.52346987,
+          0.83917397
+        ],
+        "beam_width_m": 0.22,
+        "exact_reflection": true
+      },
+      {
+        "part_id": "wafer_300mm_secondary",
+        "point": [
+          1.25,
+          1.33,
+          0.68
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "beam_width_m": 0.12,
+        "exact_reflection": false
+      }
+    ],
+    "exposure_station_world": [
+      1.25,
+      1.33,
+      0.68
+    ],
+    "measurement_station_world": [
+      -0.82,
+      1.33,
+      0.68
+    ],
+    "notice": "紫色宽束为教学可视化，EUV 本身不可见。六级投影反射的中心线与模型镜面法线一致；几何曲率、宽束截面与内部布局不是工程光学处方。",
+    "beam_width_semantics": "full_width_meters"
+  },
+  "education_metrology": {
+    "schema_version": 1,
+    "coordinate_system": "godot_y_up",
+    "wavelength_m": 6.328e-07,
+    "notice": "教学单往返干涉：Δφ=4πΔL/λ。X/Y光路演示两轴位移，不构成完整六自由度测量。PSD为接收器，邻侧独立照明光源经角锥回射；四象限窗口仅为QPD式教学图形。三点在标定中心阈值内才判零位，非真实ASML归零架构。",
+    "heads": [
+      {
+        "part_id": "metrology_ifm_measure_x",
+        "station": "measurement",
+        "axis": "x",
+        "point_local": [
+          0.07599998,
+          0.0,
+          -0.0
+        ],
+        "direction_local": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "part_id": "metrology_ifm_measure_y",
+        "station": "measurement",
+        "axis": "y",
+        "point_local": [
+          0.0,
+          0.0,
+          0.07600001
+        ],
+        "direction_local": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "part_id": "metrology_ifm_exposure_x",
+        "station": "exposure",
+        "axis": "x",
+        "point_local": [
+          0.07600001,
+          0.0,
+          -0.0
+        ],
+        "direction_local": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "part_id": "metrology_ifm_exposure_y",
+        "station": "exposure",
+        "axis": "y",
+        "point_local": [
+          0.0,
+          0.0,
+          0.07600001
+        ],
+        "direction_local": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "stages": {
+      "A": {
+        "mirrors": {
+          "x": {
+            "part_id": "stage_a_mirror_x",
+            "point_local": [
+              -0.01499999,
+              0.0,
+              -0.0
+            ],
+            "normal_local": [
+              -1,
+              0,
+              0
+            ],
+            "tangent_local": [
+              0,
+              0,
+              1
+            ],
+            "half_length_m": 0.22,
+            "half_height_m": 0.025
+          },
+          "y": {
+            "part_id": "stage_a_mirror_y",
+            "point_local": [
+              0.0,
+              0.0,
+              -0.01499999
+            ],
+            "normal_local": [
+              0,
+              0,
+              -1
+            ],
+            "tangent_local": [
+              1,
+              0,
+              0
+            ],
+            "half_length_m": 0.22,
+            "half_height_m": 0.025
+          }
+        },
+        "corner_cubes": [
+          {
+            "part_id": "stage_a_corner_cube_1",
+            "point_local": [
+              0,
+              -0.017,
+              0
+            ],
+            "normal_local": [
+              0,
+              -1,
+              0
+            ]
+          },
+          {
+            "part_id": "stage_a_corner_cube_2",
+            "point_local": [
+              0,
+              -0.017,
+              0
+            ],
+            "normal_local": [
+              0,
+              -1,
+              0
+            ]
+          },
+          {
+            "part_id": "stage_a_corner_cube_3",
+            "point_local": [
+              0,
+              -0.017,
+              0
+            ],
+            "normal_local": [
+              0,
+              -1,
+              0
+            ]
+          }
+        ]
+      },
+      "B": {
+        "mirrors": {
+          "x": {
+            "part_id": "stage_b_mirror_x",
+            "point_local": [
+              -0.01499999,
+              0.0,
+              -0.0
+            ],
+            "normal_local": [
+              -1,
+              0,
+              0
+            ],
+            "tangent_local": [
+              0,
+              0,
+              1
+            ],
+            "half_length_m": 0.22,
+            "half_height_m": 0.025
+          },
+          "y": {
+            "part_id": "stage_b_mirror_y",
+            "point_local": [
+              0.0,
+              0.0,
+              -0.01499999
+            ],
+            "normal_local": [
+              0,
+              0,
+              -1
+            ],
+            "tangent_local": [
+              1,
+              0,
+              0
+            ],
+            "half_length_m": 0.22,
+            "half_height_m": 0.025
+          }
+        },
+        "corner_cubes": [
+          {
+            "part_id": "stage_b_corner_cube_1",
+            "point_local": [
+              0,
+              -0.017,
+              0
+            ],
+            "normal_local": [
+              0,
+              -1,
+              0
+            ]
+          },
+          {
+            "part_id": "stage_b_corner_cube_2",
+            "point_local": [
+              0,
+              -0.017,
+              0
+            ],
+            "normal_local": [
+              0,
+              -1,
+              0
+            ]
+          },
+          {
+            "part_id": "stage_b_corner_cube_3",
+            "point_local": [
+              0,
+              -0.017,
+              0
+            ],
+            "normal_local": [
+              0,
+              -1,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "zero_sensors": [
+      {
+        "part_id": "metrology_psd_measure_1",
+        "station": "measurement",
+        "index": 0,
+        "receiver_local": [
+          0,
+          0.005,
+          0
+        ],
+        "illuminator_local": [
+          0.014,
+          0.005,
+          0
+        ],
+        "direction_local": [
+          0,
+          1,
+          0
+        ],
+        "nominal_cube_world": [
+          -1.3849999999999998,
+          1.053,
+          0.44000000000000006
+        ],
+        "capture_radius_m": 0.012
+      },
+      {
+        "part_id": "metrology_psd_measure_2",
+        "station": "measurement",
+        "index": 1,
+        "receiver_local": [
+          0,
+          0.005,
+          0
+        ],
+        "illuminator_local": [
+          0.014,
+          0.005,
+          0
+        ],
+        "direction_local": [
+          0,
+          1,
+          0
+        ],
+        "nominal_cube_world": [
+          -1.3849999999999998,
+          1.053,
+          0.92
+        ],
+        "capture_radius_m": 0.012
+      },
+      {
+        "part_id": "metrology_psd_measure_3",
+        "station": "measurement",
+        "index": 2,
+        "receiver_local": [
+          0,
+          0.005,
+          0
+        ],
+        "illuminator_local": [
+          0.014,
+          0.005,
+          0
+        ],
+        "direction_local": [
+          0,
+          1,
+          0
+        ],
+        "nominal_cube_world": [
+          -0.255,
+          1.053,
+          0.68
+        ],
+        "capture_radius_m": 0.012
+      },
+      {
+        "part_id": "metrology_psd_exposure_1",
+        "station": "exposure",
+        "index": 0,
+        "receiver_local": [
+          0,
+          0.005,
+          0
+        ],
+        "illuminator_local": [
+          0.014,
+          0.005,
+          0
+        ],
+        "direction_local": [
+          0,
+          1,
+          0
+        ],
+        "nominal_cube_world": [
+          0.685,
+          1.053,
+          0.44000000000000006
+        ],
+        "capture_radius_m": 0.012
+      },
+      {
+        "part_id": "metrology_psd_exposure_2",
+        "station": "exposure",
+        "index": 1,
+        "receiver_local": [
+          0,
+          0.005,
+          0
+        ],
+        "illuminator_local": [
+          0.014,
+          0.005,
+          0
+        ],
+        "direction_local": [
+          0,
+          1,
+          0
+        ],
+        "nominal_cube_world": [
+          0.685,
+          1.053,
+          0.92
+        ],
+        "capture_radius_m": 0.012
+      },
+      {
+        "part_id": "metrology_psd_exposure_3",
+        "station": "exposure",
+        "index": 2,
+        "receiver_local": [
+          0,
+          0.005,
+          0
+        ],
+        "illuminator_local": [
+          0.014,
+          0.005,
+          0
+        ],
+        "direction_local": [
+          0,
+          1,
+          0
+        ],
+        "nominal_cube_world": [
+          1.815,
+          1.053,
+          0.68
+        ],
+        "capture_radius_m": 0.012
+      }
+    ],
+    "zero_tolerance_m": 0.0008,
+    "cutaway_parts": [
+      "metrology_interferometer"
+    ]
+  },
+  "education_stations": {
+    "A_initial": "measurement",
+    "B_initial": "exposure",
+    "table_a_motion_part": "wafer_stage_x",
+    "table_b_motion_part": "wafer_stage_dual_bed",
+    "measurement_world": [
+      -0.82,
+      1.33,
+      0.68
+    ],
+    "exposure_world": [
+      1.25,
+      1.33,
+      0.68
+    ],
+    "stage_swap_distance_m": 2.07,
+    "wafer_diameter_m": 0.3
+  },
+  "parts": [
+    {
+      "part_id": "machine",
+      "parent_id": null,
+      "node_name": "p__machine",
+      "label_zh": "CF / EUV-01 视频参考教学光刻机",
+      "description_zh": "按用户视频可见形态重建的虚构 EUV 教学设备；所有未公开尺寸和内部布局都是教学示意。",
+      "kind": "machine",
+      "subsystem": "machine",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.0,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure",
+      "parent_id": "machine",
+      "node_name": "p__enclosure",
+      "label_zh": "外壳",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.0,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame",
+      "parent_id": "machine",
+      "node_name": "p__frame",
+      "label_zh": "机架",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.0,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.18,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "source",
+      "parent_id": "machine",
+      "node_name": "p__source",
+      "label_zh": "光源",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "source",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -3.45000005,
+          1.79999995,
+          -0.40000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -1.6,
+        0.18,
+        -0.2
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "illumination",
+      "parent_id": "machine",
+      "node_name": "p__illumination",
+      "label_zh": "照明系统",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "illumination",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -1.39999998,
+          2.4000001,
+          -0.30000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.7,
+        0.75,
+        -0.5
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "reticle",
+      "parent_id": "machine",
+      "node_name": "p__reticle",
+      "label_zh": "掩模系统",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "reticle",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.2,
+          2.9000001,
+          -0.44999999
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        1.0,
+        -0.38
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "projection",
+      "parent_id": "machine",
+      "node_name": "p__projection",
+      "label_zh": "投影光学",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "projection",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          1.14999998,
+          2.1500001,
+          -0.75
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.15,
+        0.7,
+        -0.72
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_stage",
+      "parent_id": "machine",
+      "node_name": "p__wafer_stage",
+      "label_zh": "晶圆台",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.15000001,
+          0.69999999,
+          0.64999998
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.1,
+        1.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling",
+      "parent_id": "machine",
+      "node_name": "p__handling",
+      "label_zh": "搬运系统",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -3.0999999,
+          1.0,
+          0.5
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -1.2,
+        0.12,
+        0.65
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "vacuum",
+      "parent_id": "machine",
+      "node_name": "p__vacuum",
+      "label_zh": "真空系统",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "vacuum",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          3.29999995,
+          1.70000005,
+          -1.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.35,
+        0.15,
+        -1.35
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology",
+      "parent_id": "machine",
+      "node_name": "p__metrology",
+      "label_zh": "量测系统",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "metrology",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.34999999,
+          1.70000005,
+          1.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.18,
+        0.85,
+        0.58
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "utilities",
+      "parent_id": "machine",
+      "node_name": "p__utilities",
+      "label_zh": "辅助系统",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "subsystem",
+      "subsystem": "utilities",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.30000001,
+          2.0,
+          -1.29999995
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.3,
+        0.22,
+        -1.25
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_base",
+      "parent_id": "frame",
+      "node_name": "p__frame_base",
+      "label_zh": "宽幅减振基座",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.25,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.2,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_base__wide_plinth",
+        "m__frame_base__precision_deck"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_isolator_0_0",
+      "parent_id": "frame",
+      "node_name": "p__frame_isolator_0_0",
+      "label_zh": "隔振支脚 1",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -4.19999981,
+          0.13,
+          1.45000005
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.126,
+        -0.12,
+        0.0725
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_isolator_0_0__foot",
+        "m__frame_isolator_0_0__bellows"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_isolator_0_1",
+      "parent_id": "frame",
+      "node_name": "p__frame_isolator_0_1",
+      "label_zh": "隔振支脚 2",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -4.19999981,
+          0.13,
+          -1.45000005
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.126,
+        -0.12,
+        -0.0725
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_isolator_0_1__foot",
+        "m__frame_isolator_0_1__bellows"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_isolator_1_0",
+      "parent_id": "frame",
+      "node_name": "p__frame_isolator_1_0",
+      "label_zh": "隔振支脚 3",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -1.39999998,
+          0.13,
+          1.45000005
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.042,
+        -0.12,
+        0.0725
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_isolator_1_0__foot",
+        "m__frame_isolator_1_0__bellows"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_isolator_1_1",
+      "parent_id": "frame",
+      "node_name": "p__frame_isolator_1_1",
+      "label_zh": "隔振支脚 4",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -1.39999998,
+          0.13,
+          -1.45000005
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.042,
+        -0.12,
+        -0.0725
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_isolator_1_1__foot",
+        "m__frame_isolator_1_1__bellows"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_isolator_2_0",
+      "parent_id": "frame",
+      "node_name": "p__frame_isolator_2_0",
+      "label_zh": "隔振支脚 5",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          1.39999998,
+          0.13,
+          1.45000005
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.042,
+        -0.12,
+        0.0725
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_isolator_2_0__foot",
+        "m__frame_isolator_2_0__bellows"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_isolator_2_1",
+      "parent_id": "frame",
+      "node_name": "p__frame_isolator_2_1",
+      "label_zh": "隔振支脚 6",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          1.39999998,
+          0.13,
+          -1.45000005
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.042,
+        -0.12,
+        -0.0725
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_isolator_2_1__foot",
+        "m__frame_isolator_2_1__bellows"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_isolator_3_0",
+      "parent_id": "frame",
+      "node_name": "p__frame_isolator_3_0",
+      "label_zh": "隔振支脚 7",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          4.19999981,
+          0.13,
+          1.45000005
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.126,
+        -0.12,
+        0.0725
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_isolator_3_0__foot",
+        "m__frame_isolator_3_0__bellows"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_isolator_3_1",
+      "parent_id": "frame",
+      "node_name": "p__frame_isolator_3_1",
+      "label_zh": "隔振支脚 8",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          4.19999981,
+          0.13,
+          -1.45000005
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.126,
+        -0.12,
+        -0.0725
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_isolator_3_1__foot",
+        "m__frame_isolator_3_1__bellows"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_columns",
+      "parent_id": "frame",
+      "node_name": "p__frame_columns",
+      "label_zh": "开放式主支撑框架",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.55000001,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.08,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_columns__upright_4_55_1_63",
+        "m__frame_columns__anchor_4_55_1_63",
+        "m__frame_columns__upright_4_55_1_63_02",
+        "m__frame_columns__anchor_4_55_1_63_02",
+        "m__frame_columns__upright_4_55_1_63_03",
+        "m__frame_columns__anchor_4_55_1_63_03",
+        "m__frame_columns__upright_4_55_1_63_04",
+        "m__frame_columns__anchor_4_55_1_63_04",
+        "m__frame_columns__front_beam_0_78",
+        "m__frame_columns__rear_beam_0_78",
+        "m__frame_columns__front_beam_3_34",
+        "m__frame_columns__rear_beam_3_34",
+        "m__frame_columns__cross_beam_4_55",
+        "m__frame_columns__cross_beam_4_55_02",
+        "m__frame_columns__rear_brace_left",
+        "m__frame_columns__rear_brace_right"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_front_door_1",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_front_door_1",
+      "label_zh": "前侧开放框架 1",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -4.55000019,
+          1.89999998,
+          1.83000004
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.455,
+        0.15,
+        0.6
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_front_door_1__front_upright",
+        "m__enclosure_front_door_1__service_edge"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_front_door_2",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_front_door_2",
+      "label_zh": "前侧开放框架 2",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          1.89999998,
+          1.83000004
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.15,
+        0.6
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_front_door_2__lower_front_skirt",
+        "m__enclosure_front_door_2__skirt_amber_band"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_front_door_3",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_front_door_3",
+      "label_zh": "前侧开放框架 3",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          4.55000019,
+          1.89999998,
+          1.83000004
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.455,
+        0.15,
+        0.6
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_front_door_3__front_upright",
+        "m__enclosure_front_door_3__service_edge"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_console",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_console",
+      "label_zh": "右侧操作与安全面板",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          4.19999981,
+          1.70000005,
+          1.86000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.75,
+        0.2,
+        0.72
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_console__console_column",
+        "m__enclosure_console__console_screen_bezel",
+        "m__enclosure_console__console_screen",
+        "m__enclosure_console__estop"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_left_0",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_left_0",
+      "label_zh": "左侧板 1",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -4.69999981,
+          2.0,
+          0.60000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.55,
+        0.1,
+        0.06
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_left_0__side_panel",
+        "m__enclosure_left_0__side_skin"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_left_1",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_left_1",
+      "label_zh": "左侧板 2",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -4.69999981,
+          2.0,
+          -0.85000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.55,
+        0.1,
+        -0.085
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_left_1__side_panel",
+        "m__enclosure_left_1__side_skin"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_right_0",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_right_0",
+      "label_zh": "右侧板 1",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          4.69999981,
+          2.0,
+          0.60000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.55,
+        0.1,
+        0.06
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_right_0__side_panel",
+        "m__enclosure_right_0__side_skin"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_right_1",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_right_1",
+      "label_zh": "右侧板 2",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          4.69999981,
+          2.0,
+          -0.85000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.55,
+        0.1,
+        -0.085
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_right_1__side_panel",
+        "m__enclosure_right_1__side_skin"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_rear_0",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_rear_0",
+      "label_zh": "后侧维护框 1",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -2.95000005,
+          2.0,
+          -1.75999999
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.236,
+        0.1,
+        -0.6
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_rear_0__rear_frame"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_rear_1",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_rear_1",
+      "label_zh": "后侧维护框 2",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          2.0,
+          -1.75999999
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.1,
+        -0.6
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_rear_1__rear_frame"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_rear_2",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_rear_2",
+      "label_zh": "后侧维护框 3",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          2.95000005,
+          2.0,
+          -1.75999999
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.236,
+        0.1,
+        -0.6
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_rear_2__rear_frame"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_roof_0",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_roof_0",
+      "label_zh": "连续顶盖 1",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -3.0,
+          3.48000002,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.24,
+        0.7,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_roof_0__roof_tile",
+        "m__enclosure_roof_0__roof_seam"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_roof_1",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_roof_1",
+      "label_zh": "连续顶盖 2",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          3.48000002,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.7,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_roof_1__roof_tile",
+        "m__enclosure_roof_1__roof_seam"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_roof_2",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_roof_2",
+      "label_zh": "连续顶盖 3",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          3.0,
+          3.48000002,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.24,
+        0.7,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_roof_2__roof_tile",
+        "m__enclosure_roof_2__roof_seam"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_header",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_header",
+      "label_zh": "深靛蓝前上沿",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          3.25,
+          1.84000003
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.55,
+        0.42
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_header__header_beam",
+        "m__enclosure_header__header_inlay"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_optical_window",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_optical_window",
+      "label_zh": "光学腔观察框",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          1.25,
+          2.20000005,
+          1.88
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.18,
+        0.25,
+        0.7
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_optical_window__window_frame",
+        "m__enclosure_optical_window__window_opening"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "enclosure_tower_light",
+      "parent_id": "enclosure",
+      "node_name": "p__enclosure_tower_light",
+      "label_zh": "设备状态灯",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "enclosure",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          3.54999995,
+          3.46000004,
+          -1.35000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.36,
+        0.5,
+        -0.28
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__enclosure_tower_light__post",
+        "m__enclosure_tower_light__segment_0",
+        "m__enclosure_tower_light__segment_1",
+        "m__enclosure_tower_light__segment_2"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "source_cradle",
+      "parent_id": "source",
+      "node_name": "p__source_cradle",
+      "label_zh": "左侧光源支架",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "source",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          -0.84999996,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.3,
+        -0.1,
+        -0.12
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__source_cradle__base",
+        "m__source_cradle__leg_3_88",
+        "m__source_cradle__leg_3_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "source_chamber",
+      "parent_id": "source",
+      "node_name": "p__source_chamber",
+      "label_zh": "锡滴等离子体源腔（示意）",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "source",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          -0.01999998,
+          -0.15000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.55,
+        0.18,
+        -0.25
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__source_chamber__chamber",
+        "m__source_chamber__front_flange",
+        "m__source_chamber__rear_flange"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "source_collector",
+      "parent_id": "source",
+      "node_name": "p__source_collector",
+      "label_zh": "EUV 收集反射结构",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "source",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          -0.01999998,
+          0.38
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.35,
+        0.15,
+        -0.05
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__source_collector__collector_substrate",
+        "m__source_collector__collector_coating",
+        "m__source_collector__collector_mount"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "source_droplet_generator",
+      "parent_id": "source",
+      "node_name": "p__source_droplet_generator",
+      "label_zh": "锡滴发生器（示意）",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "source",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.18000007,
+          -0.84000003
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.35,
+        0.25,
+        -0.4
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__source_droplet_generator__nozzle",
+        "m__source_droplet_generator__droplet"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "source_laser_interface",
+      "parent_id": "source",
+      "node_name": "p__source_laser_interface",
+      "label_zh": "驱动激光接口（示意）",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "source",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.45000005,
+          0.58000016,
+          -0.40000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.25,
+        0.38,
+        -0.35
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__source_laser_interface__laser_port",
+        "m__source_laser_interface__laser_cable_run_0",
+        "m__source_laser_interface__laser_cable_run_1",
+        "m__source_laser_interface__laser_cable_elbow_0"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "illumination_support",
+      "parent_id": "illumination",
+      "node_name": "p__illumination_support",
+      "label_zh": "照明光学框架",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "illumination",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.64999998,
+          0.04999995,
+          -0.04999998
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.55,
+        0.65,
+        -0.42
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__illumination_support__support_plate",
+        "m__illumination_support__support_diagonal"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "illumination_field_mirror",
+      "parent_id": "illumination",
+      "node_name": "p__illumination_field_mirror",
+      "label_zh": "场镜",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "illumination",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.14999998,
+          0.25,
+          0.20000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.3,
+        0.7,
+        -0.25
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__illumination_field_mirror__field_mirror_substrate",
+        "m__illumination_field_mirror__field_mirror_coating",
+        "m__illumination_field_mirror__field_mirror_mount"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "illumination_pupil_mirror",
+      "parent_id": "illumination",
+      "node_name": "p__illumination_pupil_mirror",
+      "label_zh": "瞳镜",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "illumination",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.39999998,
+          0.04999995,
+          -0.07999998
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.15,
+        0.62,
+        -0.38
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__illumination_pupil_mirror__pupil_mirror_substrate",
+        "m__illumination_pupil_mirror__pupil_mirror_coating",
+        "m__illumination_pupil_mirror__pupil_mirror_mount"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "reticle_bridge",
+      "parent_id": "reticle",
+      "node_name": "p__reticle_bridge",
+      "label_zh": "掩模台固定桥架",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "reticle",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          1.60000002,
+          0.40999985,
+          -0.10000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.1,
+        0.7,
+        -0.4
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__reticle_bridge__bridge",
+        "m__reticle_bridge__rear_support_0_6",
+        "m__reticle_bridge__rear_support_2_2",
+        "m__reticle_bridge__fixed_linear_rail"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "reticle_scan_stage",
+      "parent_id": "reticle_bridge",
+      "node_name": "p__reticle_scan_stage",
+      "label_zh": "独立掩模扫描滑台",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "reticle",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.00999999,
+          0.35000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.12,
+        0.85,
+        -0.15
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "motion": "linear"
+      },
+      "mesh_nodes": [
+        "m__reticle_scan_stage__scan_carriage",
+        "m__reticle_scan_stage__carriage_lower",
+        "m__reticle_scan_stage__carriage_bolts"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "reticle_mask",
+      "parent_id": "reticle_scan_stage",
+      "node_name": "p__reticle_mask",
+      "label_zh": "反射式掩模 / 曝光原点",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "reticle",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.03999996,
+          0.07000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.1,
+        0.2,
+        0.12
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__reticle_mask__mask_substrate",
+        "m__reticle_mask__mask_reflective_face"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "reticle_grating_scale",
+      "parent_id": "reticle_bridge",
+      "node_name": "p__reticle_grating_scale",
+      "label_zh": "固定光栅标尺",
+      "description_zh": "固定于桥架的标尺；读头随掩模滑台运动，刻线间距为视觉示意。",
+      "kind": "component",
+      "subsystem": "reticle",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.07500005,
+          0.23000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.1,
+        0.18,
+        -0.05
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__reticle_grating_scale__scale_backing",
+        "m__reticle_grating_scale__graduation_ticks"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "reticle_grating_readhead",
+      "parent_id": "reticle_scan_stage",
+      "node_name": "p__reticle_grating_readhead",
+      "label_zh": "随动光栅读头",
+      "description_zh": "读头挂在 reticle_scan_stage 下，独立于固定标尺。",
+      "kind": "component",
+      "subsystem": "reticle",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.06500006,
+          -0.05499999
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.07,
+        0.16,
+        0.05
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__reticle_grating_readhead__readhead",
+        "m__reticle_grating_readhead__reading_slot",
+        "m__reticle_grating_readhead__signal_connector"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "projection_optical_truss",
+      "parent_id": "projection",
+      "node_name": "p__projection_optical_truss",
+      "label_zh": "折返光学腔承重背板与支脚",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "projection",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.26999998,
+          0.15999985,
+          -0.06999999
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.1,
+        0.35,
+        -0.62
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__projection_optical_truss__thick_outline_backplate",
+        "m__projection_optical_truss__pedestal_0_77",
+        "m__projection_optical_truss__pedestal_anchors_0_77",
+        "m__projection_optical_truss__pedestal_2_24",
+        "m__projection_optical_truss__pedestal_anchors_2_24"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "projection_vacuum_pod",
+      "parent_id": "projection",
+      "node_name": "p__projection_vacuum_pod",
+      "label_zh": "异形厚板投影腔（前盖剖开）",
+      "description_zh": "参考用户近景图的异形厚板、接缝与六独立倾斜镜座。剖视省略前盖；真实 EUV 需要真空。尺寸、曲率、精确镜位和宽束均为教学示意。",
+      "kind": "component",
+      "subsystem": "projection",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.26999998,
+          0.15999985,
+          0.18000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.1,
+        0.26,
+        -0.42
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__projection_vacuum_pod__left_cast_plate",
+        "m__projection_vacuum_pod__center_cast_plate",
+        "m__projection_vacuum_pod__right_cast_plate",
+        "m__projection_vacuum_pod__perimeter_flange_0",
+        "m__projection_vacuum_pod__perimeter_flange_1",
+        "m__projection_vacuum_pod__perimeter_flange_2",
+        "m__projection_vacuum_pod__perimeter_flange_3",
+        "m__projection_vacuum_pod__perimeter_flange_4",
+        "m__projection_vacuum_pod__perimeter_flange_5",
+        "m__projection_vacuum_pod__perimeter_flange_6",
+        "m__projection_vacuum_pod__perimeter_flange_7",
+        "m__projection_vacuum_pod__perimeter_flange_8",
+        "m__projection_vacuum_pod__perimeter_flange_9",
+        "m__projection_vacuum_pod__perimeter_flange_10",
+        "m__projection_vacuum_pod__perimeter_flange_11",
+        "m__projection_vacuum_pod__perimeter_flange_12",
+        "m__projection_vacuum_pod__perimeter_flange_13",
+        "m__projection_vacuum_pod__chamber_perimeter_fasteners",
+        "m__projection_vacuum_pod__access_seal_0",
+        "m__projection_vacuum_pod__access_plate_0",
+        "m__projection_vacuum_pod__access_bolts_0",
+        "m__projection_vacuum_pod__access_seal_1",
+        "m__projection_vacuum_pod__access_plate_1",
+        "m__projection_vacuum_pod__access_bolts_1",
+        "m__projection_vacuum_pod__access_seal_2",
+        "m__projection_vacuum_pod__access_plate_2",
+        "m__projection_vacuum_pod__access_bolts_2",
+        "m__projection_vacuum_pod__access_seal_3",
+        "m__projection_vacuum_pod__access_plate_3",
+        "m__projection_vacuum_pod__access_bolts_3",
+        "m__projection_vacuum_pod__access_seal_4",
+        "m__projection_vacuum_pod__access_plate_4",
+        "m__projection_vacuum_pod__access_bolts_4"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "projection_mirror_1",
+      "parent_id": "projection",
+      "node_name": "p__projection_mirror_1",
+      "label_zh": "倾斜投影反射镜 M1",
+      "description_zh": "镀膜表面位于清单反射点，镜面法线由相邻入射/出射方向计算；镜座倾角与中心线反射一致。曲率、布局和光束截面仍为教学示意。",
+      "kind": "component",
+      "subsystem": "projection",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.67000008,
+          0.99000001,
+          0.69999999
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.27,
+        0.0,
+        0.35
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__projection_mirror_1__mirror_substrate",
+        "m__projection_mirror_1__mirror_coating",
+        "m__projection_mirror_1__mount_flange",
+        "m__projection_mirror_1__rear_cell",
+        "m__projection_mirror_1__faceted_mounting_cell",
+        "m__projection_mirror_1__flange_adjustment_bolts",
+        "m__projection_mirror_1__trunnion_1",
+        "m__projection_mirror_1__trunnion_1_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "projection_mirror_2",
+      "parent_id": "projection",
+      "node_name": "p__projection_mirror_2",
+      "label_zh": "倾斜投影反射镜 M2",
+      "description_zh": "镀膜表面位于清单反射点，镜面法线由相邻入射/出射方向计算；镜座倾角与中心线反射一致。曲率、布局和光束截面仍为教学示意。",
+      "kind": "component",
+      "subsystem": "projection",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.94999993,
+          -0.38000011,
+          0.89999998
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.27,
+        0.13,
+        0.35
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__projection_mirror_2__mirror_substrate",
+        "m__projection_mirror_2__mirror_coating",
+        "m__projection_mirror_2__mount_flange",
+        "m__projection_mirror_2__rear_cell",
+        "m__projection_mirror_2__faceted_mounting_cell",
+        "m__projection_mirror_2__flange_adjustment_bolts",
+        "m__projection_mirror_2__trunnion_1",
+        "m__projection_mirror_2__trunnion_1_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "projection_mirror_3",
+      "parent_id": "projection",
+      "node_name": "p__projection_mirror_3",
+      "label_zh": "倾斜投影反射镜 M3",
+      "description_zh": "镀膜表面位于清单反射点，镜面法线由相邻入射/出射方向计算；镜座倾角与中心线反射一致。曲率、布局和光束截面仍为教学示意。",
+      "kind": "component",
+      "subsystem": "projection",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.59999996,
+          1.04999995,
+          0.72000003
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.27,
+        0.26,
+        0.35
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__projection_mirror_3__mirror_substrate",
+        "m__projection_mirror_3__mirror_coating",
+        "m__projection_mirror_3__mount_flange",
+        "m__projection_mirror_3__rear_cell",
+        "m__projection_mirror_3__faceted_mounting_cell",
+        "m__projection_mirror_3__flange_adjustment_bolts",
+        "m__projection_mirror_3__trunnion_1",
+        "m__projection_mirror_3__trunnion_1_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "projection_mirror_4",
+      "parent_id": "projection",
+      "node_name": "p__projection_mirror_4",
+      "label_zh": "倾斜投影反射镜 M4",
+      "description_zh": "镀膜表面位于清单反射点，镜面法线由相邻入射/出射方向计算；镜座倾角与中心线反射一致。曲率、布局和光束截面仍为教学示意。",
+      "kind": "component",
+      "subsystem": "projection",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -1.45000005,
+          0.1099999,
+          0.85000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.27,
+        0.0,
+        0.35
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__projection_mirror_4__mirror_substrate",
+        "m__projection_mirror_4__mirror_coating",
+        "m__projection_mirror_4__mount_flange",
+        "m__projection_mirror_4__rear_cell",
+        "m__projection_mirror_4__faceted_mounting_cell",
+        "m__projection_mirror_4__flange_adjustment_bolts",
+        "m__projection_mirror_4__trunnion_1",
+        "m__projection_mirror_4__trunnion_1_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "projection_mirror_5",
+      "parent_id": "projection",
+      "node_name": "p__projection_mirror_5",
+      "label_zh": "倾斜投影反射镜 M5",
+      "description_zh": "镀膜表面位于清单反射点，镜面法线由相邻入射/出射方向计算；镜座倾角与中心线反射一致。曲率、布局和光束截面仍为教学示意。",
+      "kind": "component",
+      "subsystem": "projection",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -1.81999993,
+          0.66999984,
+          0.93000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.27,
+        0.13,
+        0.35
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__projection_mirror_5__mirror_substrate",
+        "m__projection_mirror_5__mirror_coating",
+        "m__projection_mirror_5__mount_flange",
+        "m__projection_mirror_5__rear_cell",
+        "m__projection_mirror_5__faceted_mounting_cell",
+        "m__projection_mirror_5__flange_adjustment_bolts",
+        "m__projection_mirror_5__trunnion_1",
+        "m__projection_mirror_5__trunnion_1_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "projection_mirror_6",
+      "parent_id": "projection",
+      "node_name": "p__projection_mirror_6",
+      "label_zh": "倾斜投影反射镜 M6",
+      "description_zh": "镀膜表面位于清单反射点，镜面法线由相邻入射/出射方向计算；镜座倾角与中心线反射一致。曲率、布局和光束截面仍为教学示意。",
+      "kind": "component",
+      "subsystem": "projection",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.69999999,
+          -0.32000005,
+          1.06999993
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.27,
+        0.26,
+        0.35
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__projection_mirror_6__mirror_substrate",
+        "m__projection_mirror_6__mirror_coating",
+        "m__projection_mirror_6__mount_flange",
+        "m__projection_mirror_6__rear_cell",
+        "m__projection_mirror_6__faceted_mounting_cell",
+        "m__projection_mirror_6__flange_adjustment_bolts",
+        "m__projection_mirror_6__trunnion_1",
+        "m__projection_mirror_6__trunnion_1_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_stage_base",
+      "parent_id": "wafer_stage",
+      "node_name": "p__wafer_stage_base",
+      "label_zh": "固定双台花岗岩基座",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          -0.03999996,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.12,
+        1.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__wafer_stage_base__wide_stage_slab",
+        "m__wafer_stage_base__precision_top",
+        "m__wafer_stage_base__stage_front_rail",
+        "m__wafer_stage_base__side_guide_1_85",
+        "m__wafer_stage_base__side_guide_2_15",
+        "m__wafer_stage_base__bed_precision_bolts"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_stage_x",
+      "parent_id": "wafer_stage_base",
+      "node_name": "p__wafer_stage_x",
+      "label_zh": "A 工件台 X 行程底座",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.97000003,
+          0.32499999,
+          0.03000003
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.32,
+        0.12,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "motion": "linear"
+      },
+      "mesh_nodes": [
+        "m__wafer_stage_x__x_carriage",
+        "m__wafer_stage_x__scan_guide_1_01",
+        "m__wafer_stage_x__scan_guide_0_35000000000000003"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_stage_y",
+      "parent_id": "wafer_stage_x",
+      "node_name": "p__wafer_stage_y",
+      "label_zh": "A 工件台 Y 精密滑台",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.15999997,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.15,
+        0.28
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "motion": "linear"
+      },
+      "mesh_nodes": [
+        "m__wafer_stage_y__y_carriage",
+        "m__wafer_stage_y__ceramic_stage_top",
+        "m__wafer_stage_y__carriage_screws",
+        "m__wafer_stage_y__stage_mark"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_chuck",
+      "parent_id": "wafer_stage_y",
+      "node_name": "p__wafer_chuck",
+      "label_zh": "A 工件台静电卡盘",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.13999999,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.14,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "linear"
+      },
+      "mesh_nodes": [
+        "m__wafer_chuck__chuck_body",
+        "m__wafer_chuck__chuck_face"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_300mm",
+      "parent_id": "wafer_chuck",
+      "node_name": "p__wafer_300mm",
+      "label_zh": "A 台 300 mm 晶圆",
+      "description_zh": "模型精确直径 0.300 m；工件台 A 可与工件台 B 独立交换量测/曝光位置。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.04500008,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__wafer_300mm__silicon"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_stage_dual_bed",
+      "parent_id": "wafer_stage_base",
+      "node_name": "p__wafer_stage_dual_bed",
+      "label_zh": "B 独立工件台",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          1.10000002,
+          0.48499995,
+          0.03000003
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.18,
+        0.17,
+        0.05
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "motion": "linear"
+      },
+      "mesh_nodes": [
+        "m__wafer_stage_dual_bed__dual_bed",
+        "m__wafer_stage_dual_bed__b_precision_carriage",
+        "m__wafer_stage_dual_bed__b_ceramic_top",
+        "m__wafer_stage_dual_bed__b_scan_guide_1_01",
+        "m__wafer_stage_dual_bed__b_scan_guide_0_35000000000000003",
+        "m__wafer_stage_dual_bed__carriage_screws",
+        "m__wafer_stage_dual_bed__stage_mark"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_chuck_secondary",
+      "parent_id": "wafer_stage_dual_bed",
+      "node_name": "p__wafer_chuck_secondary",
+      "label_zh": "B 工件台静电卡盘",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.13999999,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.15,
+        0.22,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "linear"
+      },
+      "mesh_nodes": [
+        "m__wafer_chuck_secondary__secondary_chuck",
+        "m__wafer_chuck_secondary__secondary_chuck_face"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_300mm_secondary",
+      "parent_id": "wafer_chuck_secondary",
+      "node_name": "p__wafer_300mm_secondary",
+      "label_zh": "B 台 300 mm 晶圆占位",
+      "description_zh": "精确直径 0.300 m；运行流程可隐藏空台晶圆占位，工艺数据不依赖此视觉网格。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.04500008,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.16,
+        0.28,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__wafer_300mm_secondary__secondary_wafer"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_stage_service_loops",
+      "parent_id": "wafer_stage_base",
+      "node_name": "p__wafer_stage_service_loops",
+      "label_zh": "双台固定接口与柔性拖链",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.05,
+          0.46999997,
+          -0.59999996
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.12,
+        0.22,
+        -0.38
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__wafer_stage_service_loops__articulated_chain_0",
+        "m__wafer_stage_service_loops__white_service_ribbon_0_0_run_0",
+        "m__wafer_stage_service_loops__white_service_ribbon_0_1_run_0",
+        "m__wafer_stage_service_loops__white_service_ribbon_0_2_run_0",
+        "m__wafer_stage_service_loops__articulated_chain_1",
+        "m__wafer_stage_service_loops__white_service_ribbon_1_0_run_0",
+        "m__wafer_stage_service_loops__white_service_ribbon_1_1_run_0",
+        "m__wafer_stage_service_loops__white_service_ribbon_1_2_run_0"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_station_measurement",
+      "parent_id": "metrology",
+      "node_name": "p__wafer_station_measurement",
+      "label_zh": "固定量测工位桥架",
+      "description_zh": "固定站点 A 初始对准此处；独立工件台交换位置时量测桥不随台移动。",
+      "kind": "component",
+      "subsystem": "metrology",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -1.16999996,
+          0.19999993,
+          -1.22000003
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.25,
+        0.28,
+        -0.1
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__wafer_station_measurement__station_pillar_1_37",
+        "m__wafer_station_measurement__station_pillar_0_27",
+        "m__wafer_station_measurement__measurement_bridge",
+        "m__wafer_station_measurement__measurement_head_arm",
+        "m__wafer_station_measurement__measurement_head",
+        "m__wafer_station_measurement__measurement_aperture",
+        "m__wafer_station_measurement__station_label"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "wafer_station_exposure",
+      "parent_id": "metrology",
+      "node_name": "p__wafer_station_exposure",
+      "label_zh": "固定曝光输出站点",
+      "description_zh": "最终反射束终点为固定曝光站；镜面至晶圆间保持开放显示。",
+      "kind": "component",
+      "subsystem": "metrology",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.89999998,
+          -0.17000008,
+          -1.27999997
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.25,
+        0.24,
+        -0.16
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__wafer_station_exposure__output_reference_bracket_0_88",
+        "m__wafer_station_exposure__output_reference_bracket_1_62",
+        "m__wafer_station_exposure__output_crossbeam",
+        "m__wafer_station_exposure__station_name_plate",
+        "m__wafer_station_exposure__station_label"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_deck",
+      "parent_id": "handling",
+      "node_name": "p__handling_deck",
+      "label_zh": "左侧搬运平台",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.08000016,
+          -0.12,
+          0.07999998
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.25,
+        -0.05,
+        0.12
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__handling_deck__deck",
+        "m__handling_deck__support",
+        "m__handling_deck__support_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_arm_shoulder",
+      "parent_id": "handling",
+      "node_name": "p__handling_arm_shoulder",
+      "label_zh": "白色搬运臂肩关节",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.05000019,
+          0.04999995,
+          -0.03999999
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.2,
+        0.16,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "rotary"
+      },
+      "mesh_nodes": [
+        "m__handling_arm_shoulder__motor",
+        "m__handling_arm_shoulder__upper_arm"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_arm_forearm",
+      "parent_id": "handling_arm_shoulder",
+      "node_name": "p__handling_arm_forearm",
+      "label_zh": "搬运臂肘关节与前臂",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.80000019,
+          0.22000003,
+          -0.31
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.25,
+        0.14,
+        -0.12
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "rotary"
+      },
+      "mesh_nodes": [
+        "m__handling_arm_forearm__elbow",
+        "m__handling_arm_forearm__forearm"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_arm_wrist",
+      "parent_id": "handling_arm_forearm",
+      "node_name": "p__handling_arm_wrist",
+      "label_zh": "搬运臂腕关节",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.86999989,
+          0.08000004,
+          0.47
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.15,
+        0.13,
+        0.17
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "rotary"
+      },
+      "mesh_nodes": [
+        "m__handling_arm_wrist__wrist"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_wafer_fork",
+      "parent_id": "handling_arm_wrist",
+      "node_name": "p__handling_wafer_fork",
+      "label_zh": "双叉晶圆搬运末端",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.12,
+          0.03999996,
+          0.10000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.12,
+        0.12,
+        0.12
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__handling_wafer_fork__fork_cross",
+        "m__handling_wafer_fork__tine",
+        "m__handling_wafer_fork__tine_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_prealigner",
+      "parent_id": "handling",
+      "node_name": "p__handling_prealigner",
+      "label_zh": "晶圆预对准器",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.25,
+          0.01999998,
+          -0.91999996
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.2,
+        0.17,
+        -0.3
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__handling_prealigner__housing",
+        "m__handling_prealigner__turntable"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_load_lock",
+      "parent_id": "handling",
+      "node_name": "p__handling_load_lock",
+      "label_zh": "晶圆装载锁",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.62000012,
+          0.14999998,
+          -1.5
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.28,
+        0.15,
+        -0.62
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__handling_load_lock__lock"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_load_port_1",
+      "parent_id": "handling",
+      "node_name": "p__handling_load_port_1",
+      "label_zh": "FOUP 装载口 1",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.45000005,
+          0.03999996,
+          1.48000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.2485,
+        0.06,
+        0.75
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__handling_load_port_1__pedestal",
+        "m__handling_load_port_1__foup",
+        "m__handling_load_port_1__front"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_load_port_2",
+      "parent_id": "handling",
+      "node_name": "p__handling_load_port_2",
+      "label_zh": "FOUP 装载口 2",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.44999981,
+          0.03999996,
+          1.48000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.1855,
+        0.06,
+        0.75
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__handling_load_port_2__pedestal",
+        "m__handling_load_port_2__foup",
+        "m__handling_load_port_2__front"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "vacuum_exposure_chamber",
+      "parent_id": "vacuum",
+      "node_name": "p__vacuum_exposure_chamber",
+      "label_zh": "右侧曝光真空腔（教学示意）",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "vacuum",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.3499999,
+          0.3499999,
+          0.23000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.36,
+        0.3,
+        -0.55
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__vacuum_exposure_chamber__chamber_body",
+        "m__vacuum_exposure_chamber__chamber_dark_face",
+        "m__vacuum_exposure_chamber__front_flange"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "vacuum_turbo_pump",
+      "parent_id": "vacuum",
+      "node_name": "p__vacuum_turbo_pump",
+      "label_zh": "右侧涡轮分子泵",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "vacuum",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.42000008,
+          -0.82000005,
+          0.04000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.25,
+        -0.08,
+        -0.58
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__vacuum_turbo_pump__pump_body",
+        "m__vacuum_turbo_pump__motor",
+        "m__vacuum_turbo_pump__rib",
+        "m__vacuum_turbo_pump__rib_02",
+        "m__vacuum_turbo_pump__rib_03",
+        "m__vacuum_turbo_pump__rib_04",
+        "m__vacuum_turbo_pump__rib_05",
+        "m__vacuum_turbo_pump__rib_06"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "vacuum_manifold",
+      "parent_id": "vacuum",
+      "node_name": "p__vacuum_manifold",
+      "label_zh": "右侧密集真空主管",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "vacuum",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.04999995,
+          -0.34000003
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.28,
+        0.18,
+        -0.72
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__vacuum_manifold__trunk_run_0",
+        "m__vacuum_manifold__trunk_run_1",
+        "m__vacuum_manifold__trunk_run_2",
+        "m__vacuum_manifold__trunk_elbow_0",
+        "m__vacuum_manifold__trunk_elbow_1",
+        "m__vacuum_manifold__pump_line_run_0",
+        "m__vacuum_manifold__flange",
+        "m__vacuum_manifold__flange_02",
+        "m__vacuum_manifold__flange_03"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "vacuum_gate_valve",
+      "parent_id": "vacuum",
+      "node_name": "p__vacuum_gate_valve",
+      "label_zh": "真空隔离阀",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "vacuum",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.04999995,
+          0.0,
+          -0.34000003
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.3,
+        0.1,
+        -0.42
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__vacuum_gate_valve__valve",
+        "m__vacuum_gate_valve__actuator"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "vacuum_pressure_sensor",
+      "parent_id": "vacuum",
+      "node_name": "p__vacuum_pressure_sensor",
+      "label_zh": "真空计",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "vacuum",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.04999995,
+          1.39999986,
+          -0.35000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.3,
+        0.38,
+        -0.5
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__vacuum_pressure_sensor__stem",
+        "m__vacuum_pressure_sensor__gauge"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_bridge",
+      "parent_id": "metrology",
+      "node_name": "p__metrology_bridge",
+      "label_zh": "中央量测桥",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "metrology",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.14999998,
+          -0.01999998
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.1,
+        0.22,
+        0.45
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_bridge__pillar",
+        "m__metrology_bridge__pillar_02",
+        "m__metrology_bridge__bridge"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_alignment_sensor",
+      "parent_id": "metrology",
+      "node_name": "p__metrology_alignment_sensor",
+      "label_zh": "晶圆对准传感器（示意）",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "metrology",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.64999998,
+          -0.0200001,
+          0.04999995
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.2,
+        0.2,
+        0.25
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_alignment_sensor__sensor",
+        "m__metrology_alignment_sensor__objective"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_level_sensor",
+      "parent_id": "metrology",
+      "node_name": "p__metrology_level_sensor",
+      "label_zh": "非接触调平传感器（示意）",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "metrology",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.69999993,
+          -0.04000008,
+          0.04999995
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.28,
+        0.22,
+        0.25
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_level_sensor__level"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_interferometer",
+      "parent_id": "metrology",
+      "node_name": "p__metrology_interferometer",
+      "label_zh": "计量光纤分配盒（兼容部件）",
+      "description_zh": "保留旧part_id；新的四组固定干涉头及侧镜分别具备独立ID。",
+      "kind": "component",
+      "subsystem": "metrology",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.05000001,
+          -0.62,
+          0.32000005
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.05,
+        0.12,
+        0.36
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_interferometer__body"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "utilities_electrical_cabinet",
+      "parent_id": "utilities",
+      "node_name": "p__utilities_electrical_cabinet",
+      "label_zh": "右侧电气控制柜",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "utilities",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          3.79999995,
+          0.54999995,
+          0.01999998
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.58,
+        0.18,
+        -0.4
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__utilities_electrical_cabinet__cabinet",
+        "m__utilities_electrical_cabinet__door",
+        "m__utilities_electrical_cabinet__vent",
+        "m__utilities_electrical_cabinet__vent_02",
+        "m__utilities_electrical_cabinet__vent_03",
+        "m__utilities_electrical_cabinet__vent_04",
+        "m__utilities_electrical_cabinet__vent_05"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "utilities_cooling",
+      "parent_id": "utilities",
+      "node_name": "p__utilities_cooling",
+      "label_zh": "冷却分配组件",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "utilities",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -4.1500001,
+          -1.07999992,
+          0.12
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.5,
+        -0.08,
+        -0.35
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__utilities_cooling__cooling_unit",
+        "m__utilities_cooling__radiator",
+        "m__utilities_cooling__radiator_02",
+        "m__utilities_cooling__radiator_03",
+        "m__utilities_cooling__radiator_04"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "utilities_cable_tray",
+      "parent_id": "utilities",
+      "node_name": "p__utilities_cable_tray",
+      "label_zh": "顶部线缆托架",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "utilities",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          1.07999992,
+          -0.10000002
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.28,
+        -0.48
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__utilities_cable_tray__tray_rail",
+        "m__utilities_cable_tray__tray_rail_02",
+        "m__utilities_cable_tray__tray_rung",
+        "m__utilities_cable_tray__tray_rung_02",
+        "m__utilities_cable_tray__tray_rung_03",
+        "m__utilities_cable_tray__tray_rung_04",
+        "m__utilities_cable_tray__tray_rung_05",
+        "m__utilities_cable_tray__tray_rung_06",
+        "m__utilities_cable_tray__tray_rung_07",
+        "m__utilities_cable_tray__tray_rung_08",
+        "m__utilities_cable_tray__tray_rung_09",
+        "m__utilities_cable_tray__tray_rung_10",
+        "m__utilities_cable_tray__tray_rung_11",
+        "m__utilities_cable_tray__tray_rung_12",
+        "m__utilities_cable_tray__tray_rung_13",
+        "m__utilities_cable_tray__tray_rung_14",
+        "m__utilities_cable_tray__tray_rung_15",
+        "m__utilities_cable_tray__tray_rung_16",
+        "m__utilities_cable_tray__tray_rung_17",
+        "m__utilities_cable_tray__tray_rung_18",
+        "m__utilities_cable_tray__tray_rung_19",
+        "m__utilities_cable_tray__tray_rung_20",
+        "m__utilities_cable_tray__tray_rung_21",
+        "m__utilities_cable_tray__tray_rung_22",
+        "m__utilities_cable_tray__tray_rung_23",
+        "m__utilities_cable_tray__tray_rung_24",
+        "m__utilities_cable_tray__tray_rung_25",
+        "m__utilities_cable_tray__tray_rung_26",
+        "m__utilities_cable_tray__tray_rung_27",
+        "m__utilities_cable_tray__tray_rung_28",
+        "m__utilities_cable_tray__tray_rung_29",
+        "m__utilities_cable_tray__tray_rung_30",
+        "m__utilities_cable_tray__harness_run_0",
+        "m__utilities_cable_tray__harness_run_1",
+        "m__utilities_cable_tray__harness_elbow_0"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "frame_overhead_service_gantry",
+      "parent_id": "frame",
+      "node_name": "p__frame_overhead_service_gantry",
+      "label_zh": "顶部承力桁架与服务横梁",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "frame",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          3.43000007,
+          -0.25
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.32,
+        -0.1
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__frame_overhead_service_gantry__upper_box_beam",
+        "m__frame_overhead_service_gantry__upper_box_beam_02",
+        "m__frame_overhead_service_gantry__roof_crossmember",
+        "m__frame_overhead_service_gantry__gusset_fasteners",
+        "m__frame_overhead_service_gantry__gusset_fasteners_02",
+        "m__frame_overhead_service_gantry__roof_crossmember_02",
+        "m__frame_overhead_service_gantry__gusset_fasteners_03",
+        "m__frame_overhead_service_gantry__gusset_fasteners_04",
+        "m__frame_overhead_service_gantry__roof_crossmember_03",
+        "m__frame_overhead_service_gantry__gusset_fasteners_05",
+        "m__frame_overhead_service_gantry__gusset_fasteners_06",
+        "m__frame_overhead_service_gantry__roof_crossmember_04",
+        "m__frame_overhead_service_gantry__gusset_fasteners_07",
+        "m__frame_overhead_service_gantry__gusset_fasteners_08",
+        "m__frame_overhead_service_gantry__roof_crossmember_05",
+        "m__frame_overhead_service_gantry__gusset_fasteners_09",
+        "m__frame_overhead_service_gantry__gusset_fasteners_10"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_frontend_cabinet",
+      "parent_id": "handling",
+      "node_name": "p__handling_frontend_cabinet",
+      "label_zh": "左侧晶圆前端与装载隔离柜",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.73000002,
+          1.18000007,
+          0.14999998
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.6,
+        0.1,
+        0.25
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__handling_frontend_cabinet__left_service_tower",
+        "m__handling_frontend_cabinet__left_service_tower_captive_screws",
+        "m__handling_frontend_cabinet__left_service_tower_handle",
+        "m__handling_frontend_cabinet__service_panel_seam",
+        "m__handling_frontend_cabinet__service_panel_seam_02",
+        "m__handling_frontend_cabinet__service_panel_seam_03",
+        "m__handling_frontend_cabinet__inspection_window",
+        "m__handling_frontend_cabinet__asml_wordmark",
+        "m__handling_frontend_cabinet__equipment_tag"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "handling_loadlock_service",
+      "parent_id": "handling",
+      "node_name": "p__handling_loadlock_service",
+      "label_zh": "装载锁泵组与传片隔离机构",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "handling",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.44999981,
+          0.63,
+          -1.27999997
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.38,
+        0.18,
+        -0.1
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__handling_loadlock_service__loadlock_panel",
+        "m__handling_loadlock_service__loadlock_panel_captive_screws",
+        "m__handling_loadlock_service__loadlock_panel_handle",
+        "m__handling_loadlock_service__airlock_flange",
+        "m__handling_loadlock_service__door_seal",
+        "m__handling_loadlock_service__pneumatic_drive",
+        "m__handling_loadlock_service__pneumatic_drive_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "vacuum_stage_service_panels",
+      "parent_id": "vacuum",
+      "node_name": "p__vacuum_stage_service_panels",
+      "label_zh": "双台真空腔前侧检修面板",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "vacuum",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -3.07999992,
+          -0.78000003,
+          2.4000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.05,
+        0.38
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__vacuum_stage_service_panels__stage_service_door_0",
+        "m__vacuum_stage_service_panels__stage_service_door_0_captive_screws",
+        "m__vacuum_stage_service_panels__stage_service_door_0_handle",
+        "m__vacuum_stage_service_panels__warning_plate_0",
+        "m__vacuum_stage_service_panels__warning_mark_0",
+        "m__vacuum_stage_service_panels__stage_service_door_1",
+        "m__vacuum_stage_service_panels__stage_service_door_1_captive_screws",
+        "m__vacuum_stage_service_panels__stage_service_door_1_handle",
+        "m__vacuum_stage_service_panels__warning_plate_1",
+        "m__vacuum_stage_service_panels__warning_mark_1",
+        "m__vacuum_stage_service_panels__stage_service_door_2",
+        "m__vacuum_stage_service_panels__stage_service_door_2_captive_screws",
+        "m__vacuum_stage_service_panels__stage_service_door_2_handle",
+        "m__vacuum_stage_service_panels__warning_plate_2",
+        "m__vacuum_stage_service_panels__warning_mark_2",
+        "m__vacuum_stage_service_panels__stage_service_door_3",
+        "m__vacuum_stage_service_panels__stage_service_door_3_captive_screws",
+        "m__vacuum_stage_service_panels__stage_service_door_3_handle",
+        "m__vacuum_stage_service_panels__warning_plate_3",
+        "m__vacuum_stage_service_panels__warning_mark_3",
+        "m__vacuum_stage_service_panels__stage_service_door_4",
+        "m__vacuum_stage_service_panels__stage_service_door_4_captive_screws",
+        "m__vacuum_stage_service_panels__stage_service_door_4_handle",
+        "m__vacuum_stage_service_panels__warning_plate_4",
+        "m__vacuum_stage_service_panels__warning_mark_4"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "reticle_vacuum_hood",
+      "parent_id": "reticle",
+      "node_name": "p__reticle_vacuum_hood",
+      "label_zh": "掩模真空转接舱与隔振罩",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "reticle",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          1.55000007,
+          0.3499999,
+          -0.25
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.1,
+        0.45,
+        -0.3
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__reticle_vacuum_hood__upper_transfer_housing",
+        "m__reticle_vacuum_hood__reticle_access_0",
+        "m__reticle_vacuum_hood__reticle_access_0_captive_screws",
+        "m__reticle_vacuum_hood__reticle_access_0_handle",
+        "m__reticle_vacuum_hood__reticle_access_1",
+        "m__reticle_vacuum_hood__reticle_access_1_captive_screws",
+        "m__reticle_vacuum_hood__reticle_access_1_handle",
+        "m__reticle_vacuum_hood__reticle_access_2",
+        "m__reticle_vacuum_hood__reticle_access_2_captive_screws",
+        "m__reticle_vacuum_hood__reticle_access_2_handle",
+        "m__reticle_vacuum_hood__reticle_vacuum_pipe_run_0",
+        "m__reticle_vacuum_hood__reticle_vacuum_pipe_run_1",
+        "m__reticle_vacuum_hood__reticle_vacuum_pipe_elbow_0"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "projection_cell_service_skin",
+      "parent_id": "projection",
+      "node_name": "p__projection_cell_service_skin",
+      "label_zh": "投影光学腔分段护板与调节接口",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "projection",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.25,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.18,
+        0.2,
+        -0.42
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__projection_cell_service_skin__optics_inspection_panel_0",
+        "m__projection_cell_service_skin__optics_inspection_panel_0_captive_screws",
+        "m__projection_cell_service_skin__optics_inspection_panel_0_handle",
+        "m__projection_cell_service_skin__adjuster_0",
+        "m__projection_cell_service_skin__warning_plate_0",
+        "m__projection_cell_service_skin__warning_mark_0",
+        "m__projection_cell_service_skin__optics_inspection_panel_1",
+        "m__projection_cell_service_skin__optics_inspection_panel_1_captive_screws",
+        "m__projection_cell_service_skin__optics_inspection_panel_1_handle",
+        "m__projection_cell_service_skin__adjuster_1",
+        "m__projection_cell_service_skin__warning_plate_1",
+        "m__projection_cell_service_skin__warning_mark_1",
+        "m__projection_cell_service_skin__optics_inspection_panel_2",
+        "m__projection_cell_service_skin__optics_inspection_panel_2_captive_screws",
+        "m__projection_cell_service_skin__optics_inspection_panel_2_handle",
+        "m__projection_cell_service_skin__adjuster_2",
+        "m__projection_cell_service_skin__warning_plate_2",
+        "m__projection_cell_service_skin__warning_mark_2",
+        "m__projection_cell_service_skin__optics_inspection_panel_3",
+        "m__projection_cell_service_skin__optics_inspection_panel_3_captive_screws",
+        "m__projection_cell_service_skin__optics_inspection_panel_3_handle",
+        "m__projection_cell_service_skin__adjuster_3",
+        "m__projection_cell_service_skin__warning_plate_3",
+        "m__projection_cell_service_skin__warning_mark_3",
+        "m__projection_cell_service_skin__optics_inspection_panel_4",
+        "m__projection_cell_service_skin__optics_inspection_panel_4_captive_screws",
+        "m__projection_cell_service_skin__optics_inspection_panel_4_handle",
+        "m__projection_cell_service_skin__adjuster_4",
+        "m__projection_cell_service_skin__warning_plate_4",
+        "m__projection_cell_service_skin__warning_mark_4"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "source_service_vessel",
+      "parent_id": "source",
+      "node_name": "p__source_service_vessel",
+      "label_zh": "右下光源服务罐与真空转接（剖面示意）",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "source",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          6.75,
+          -0.56999993,
+          1.03999996
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.35,
+        0.12,
+        0.28
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__source_service_vessel__sloped_vacuum_vessel",
+        "m__source_service_vessel__large_service_flange",
+        "m__source_service_vessel__flange_bolt_circle",
+        "m__source_service_vessel__large_service_flange_02",
+        "m__source_service_vessel__flange_bolt_circle_02",
+        "m__source_service_vessel__source_vacuum_elbow_run_0",
+        "m__source_service_vessel__source_vacuum_elbow_run_1",
+        "m__source_service_vessel__source_vacuum_elbow_elbow_0",
+        "m__source_service_vessel__vessel_cradle",
+        "m__source_service_vessel__vessel_cradle_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "utilities_roof_drive_racks",
+      "parent_id": "utilities",
+      "node_name": "p__utilities_roof_drive_racks",
+      "label_zh": "顶部驱动器与光纤控制模块",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "utilities",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.60000002,
+          1.0999999,
+          1.19999993
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.1,
+        0.4,
+        -0.28
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__utilities_roof_drive_racks__drive_module_0",
+        "m__utilities_roof_drive_racks__drive_face_0",
+        "m__utilities_roof_drive_racks__drive_slots_0",
+        "m__utilities_roof_drive_racks__drive_connector",
+        "m__utilities_roof_drive_racks__drive_connector_02",
+        "m__utilities_roof_drive_racks__drive_harness_0_run_0",
+        "m__utilities_roof_drive_racks__drive_harness_0_run_1",
+        "m__utilities_roof_drive_racks__drive_harness_0_elbow_0",
+        "m__utilities_roof_drive_racks__drive_module_1",
+        "m__utilities_roof_drive_racks__drive_face_1",
+        "m__utilities_roof_drive_racks__drive_slots_1",
+        "m__utilities_roof_drive_racks__drive_connector_03",
+        "m__utilities_roof_drive_racks__drive_connector_04",
+        "m__utilities_roof_drive_racks__drive_harness_1_run_0",
+        "m__utilities_roof_drive_racks__drive_harness_1_run_1",
+        "m__utilities_roof_drive_racks__drive_harness_1_elbow_0",
+        "m__utilities_roof_drive_racks__drive_module_2",
+        "m__utilities_roof_drive_racks__drive_face_2",
+        "m__utilities_roof_drive_racks__drive_slots_2",
+        "m__utilities_roof_drive_racks__drive_connector_05",
+        "m__utilities_roof_drive_racks__drive_connector_06",
+        "m__utilities_roof_drive_racks__drive_harness_2_run_0",
+        "m__utilities_roof_drive_racks__drive_harness_2_run_1",
+        "m__utilities_roof_drive_racks__drive_harness_2_elbow_0",
+        "m__utilities_roof_drive_racks__drive_module_3",
+        "m__utilities_roof_drive_racks__drive_face_3",
+        "m__utilities_roof_drive_racks__drive_slots_3",
+        "m__utilities_roof_drive_racks__drive_connector_07",
+        "m__utilities_roof_drive_racks__drive_connector_08",
+        "m__utilities_roof_drive_racks__drive_harness_3_run_0",
+        "m__utilities_roof_drive_racks__drive_harness_3_run_1",
+        "m__utilities_roof_drive_racks__drive_harness_3_elbow_0",
+        "m__utilities_roof_drive_racks__drive_module_4",
+        "m__utilities_roof_drive_racks__drive_face_4",
+        "m__utilities_roof_drive_racks__drive_slots_4",
+        "m__utilities_roof_drive_racks__drive_connector_09",
+        "m__utilities_roof_drive_racks__drive_connector_10",
+        "m__utilities_roof_drive_racks__drive_harness_4_run_0",
+        "m__utilities_roof_drive_racks__drive_harness_4_run_1",
+        "m__utilities_roof_drive_racks__drive_harness_4_elbow_0",
+        "m__utilities_roof_drive_racks__drive_module_5",
+        "m__utilities_roof_drive_racks__drive_face_5",
+        "m__utilities_roof_drive_racks__drive_slots_5",
+        "m__utilities_roof_drive_racks__drive_connector_11",
+        "m__utilities_roof_drive_racks__drive_connector_12",
+        "m__utilities_roof_drive_racks__drive_harness_5_run_0",
+        "m__utilities_roof_drive_racks__drive_harness_5_run_1",
+        "m__utilities_roof_drive_racks__drive_harness_5_elbow_0",
+        "m__utilities_roof_drive_racks__drive_module_6",
+        "m__utilities_roof_drive_racks__drive_face_6",
+        "m__utilities_roof_drive_racks__drive_slots_6",
+        "m__utilities_roof_drive_racks__drive_connector_13",
+        "m__utilities_roof_drive_racks__drive_connector_14",
+        "m__utilities_roof_drive_racks__drive_harness_6_run_0",
+        "m__utilities_roof_drive_racks__drive_harness_6_run_1",
+        "m__utilities_roof_drive_racks__drive_harness_6_elbow_0",
+        "m__utilities_roof_drive_racks__drive_module_7",
+        "m__utilities_roof_drive_racks__drive_face_7",
+        "m__utilities_roof_drive_racks__drive_slots_7",
+        "m__utilities_roof_drive_racks__drive_connector_15",
+        "m__utilities_roof_drive_racks__drive_connector_16",
+        "m__utilities_roof_drive_racks__drive_harness_7_run_0",
+        "m__utilities_roof_drive_racks__drive_harness_7_run_1",
+        "m__utilities_roof_drive_racks__drive_harness_7_elbow_0"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "vacuum_right_valve_bank",
+      "parent_id": "vacuum",
+      "node_name": "p__vacuum_right_valve_bank",
+      "label_zh": "右侧阀岛、真空计与分支管汇",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "vacuum",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.73000026,
+          0.29999995,
+          0.80000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.45,
+        0.15,
+        -0.3
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__vacuum_right_valve_bank__vertical_trunk_0_run_0",
+        "m__vacuum_right_valve_bank__pipe_coupling",
+        "m__vacuum_right_valve_bank__valve_body",
+        "m__vacuum_right_valve_bank__valve_actuator",
+        "m__vacuum_right_valve_bank__branch_line_run_0",
+        "m__vacuum_right_valve_bank__branch_line_run_1",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0",
+        "m__vacuum_right_valve_bank__pipe_coupling_02",
+        "m__vacuum_right_valve_bank__valve_body_02",
+        "m__vacuum_right_valve_bank__valve_actuator_02",
+        "m__vacuum_right_valve_bank__branch_line_run_0_02",
+        "m__vacuum_right_valve_bank__branch_line_run_1_02",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_02",
+        "m__vacuum_right_valve_bank__pipe_coupling_03",
+        "m__vacuum_right_valve_bank__valve_body_03",
+        "m__vacuum_right_valve_bank__valve_actuator_03",
+        "m__vacuum_right_valve_bank__branch_line_run_0_03",
+        "m__vacuum_right_valve_bank__branch_line_run_1_03",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_03",
+        "m__vacuum_right_valve_bank__pipe_coupling_04",
+        "m__vacuum_right_valve_bank__valve_body_04",
+        "m__vacuum_right_valve_bank__valve_actuator_04",
+        "m__vacuum_right_valve_bank__branch_line_run_0_04",
+        "m__vacuum_right_valve_bank__branch_line_run_1_04",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_04",
+        "m__vacuum_right_valve_bank__vertical_trunk_1_run_0",
+        "m__vacuum_right_valve_bank__pipe_coupling_05",
+        "m__vacuum_right_valve_bank__valve_body_05",
+        "m__vacuum_right_valve_bank__valve_actuator_05",
+        "m__vacuum_right_valve_bank__branch_line_run_0_05",
+        "m__vacuum_right_valve_bank__branch_line_run_1_05",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_05",
+        "m__vacuum_right_valve_bank__pipe_coupling_06",
+        "m__vacuum_right_valve_bank__valve_body_06",
+        "m__vacuum_right_valve_bank__valve_actuator_06",
+        "m__vacuum_right_valve_bank__branch_line_run_0_06",
+        "m__vacuum_right_valve_bank__branch_line_run_1_06",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_06",
+        "m__vacuum_right_valve_bank__pipe_coupling_07",
+        "m__vacuum_right_valve_bank__valve_body_07",
+        "m__vacuum_right_valve_bank__valve_actuator_07",
+        "m__vacuum_right_valve_bank__branch_line_run_0_07",
+        "m__vacuum_right_valve_bank__branch_line_run_1_07",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_07",
+        "m__vacuum_right_valve_bank__pipe_coupling_08",
+        "m__vacuum_right_valve_bank__valve_body_08",
+        "m__vacuum_right_valve_bank__valve_actuator_08",
+        "m__vacuum_right_valve_bank__branch_line_run_0_08",
+        "m__vacuum_right_valve_bank__branch_line_run_1_08",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_08",
+        "m__vacuum_right_valve_bank__vertical_trunk_2_run_0",
+        "m__vacuum_right_valve_bank__pipe_coupling_09",
+        "m__vacuum_right_valve_bank__valve_body_09",
+        "m__vacuum_right_valve_bank__valve_actuator_09",
+        "m__vacuum_right_valve_bank__branch_line_run_0_09",
+        "m__vacuum_right_valve_bank__branch_line_run_1_09",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_09",
+        "m__vacuum_right_valve_bank__pipe_coupling_10",
+        "m__vacuum_right_valve_bank__valve_body_10",
+        "m__vacuum_right_valve_bank__valve_actuator_10",
+        "m__vacuum_right_valve_bank__branch_line_run_0_10",
+        "m__vacuum_right_valve_bank__branch_line_run_1_10",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_10",
+        "m__vacuum_right_valve_bank__pipe_coupling_11",
+        "m__vacuum_right_valve_bank__valve_body_11",
+        "m__vacuum_right_valve_bank__valve_actuator_11",
+        "m__vacuum_right_valve_bank__branch_line_run_0_11",
+        "m__vacuum_right_valve_bank__branch_line_run_1_11",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_11",
+        "m__vacuum_right_valve_bank__pipe_coupling_12",
+        "m__vacuum_right_valve_bank__valve_body_12",
+        "m__vacuum_right_valve_bank__valve_actuator_12",
+        "m__vacuum_right_valve_bank__branch_line_run_0_12",
+        "m__vacuum_right_valve_bank__branch_line_run_1_12",
+        "m__vacuum_right_valve_bank__branch_line_elbow_0_12"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "utilities_coolant_distribution",
+      "parent_id": "utilities",
+      "node_name": "p__utilities_coolant_distribution",
+      "label_zh": "冷却水分配板与蓝色软管",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "utilities",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          2.67000008,
+          0.67000008,
+          0.34999996
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.3,
+        0.3,
+        -0.5
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__utilities_coolant_distribution__coolant_panel",
+        "m__utilities_coolant_distribution__quick_connector",
+        "m__utilities_coolant_distribution__blue_coolant_hose_0_run_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_0_run_1",
+        "m__utilities_coolant_distribution__blue_coolant_hose_0_run_2",
+        "m__utilities_coolant_distribution__blue_coolant_hose_0_elbow_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_0_elbow_1",
+        "m__utilities_coolant_distribution__quick_connector_02",
+        "m__utilities_coolant_distribution__blue_coolant_hose_1_run_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_1_run_1",
+        "m__utilities_coolant_distribution__blue_coolant_hose_1_run_2",
+        "m__utilities_coolant_distribution__blue_coolant_hose_1_elbow_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_1_elbow_1",
+        "m__utilities_coolant_distribution__quick_connector_03",
+        "m__utilities_coolant_distribution__blue_coolant_hose_2_run_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_2_run_1",
+        "m__utilities_coolant_distribution__blue_coolant_hose_2_run_2",
+        "m__utilities_coolant_distribution__blue_coolant_hose_2_elbow_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_2_elbow_1",
+        "m__utilities_coolant_distribution__quick_connector_04",
+        "m__utilities_coolant_distribution__blue_coolant_hose_3_run_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_3_run_1",
+        "m__utilities_coolant_distribution__blue_coolant_hose_3_run_2",
+        "m__utilities_coolant_distribution__blue_coolant_hose_3_elbow_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_3_elbow_1",
+        "m__utilities_coolant_distribution__quick_connector_05",
+        "m__utilities_coolant_distribution__blue_coolant_hose_4_run_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_4_run_1",
+        "m__utilities_coolant_distribution__blue_coolant_hose_4_run_2",
+        "m__utilities_coolant_distribution__blue_coolant_hose_4_elbow_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_4_elbow_1",
+        "m__utilities_coolant_distribution__quick_connector_06",
+        "m__utilities_coolant_distribution__blue_coolant_hose_5_run_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_5_run_1",
+        "m__utilities_coolant_distribution__blue_coolant_hose_5_run_2",
+        "m__utilities_coolant_distribution__blue_coolant_hose_5_elbow_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_5_elbow_1",
+        "m__utilities_coolant_distribution__quick_connector_07",
+        "m__utilities_coolant_distribution__blue_coolant_hose_6_run_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_6_run_1",
+        "m__utilities_coolant_distribution__blue_coolant_hose_6_run_2",
+        "m__utilities_coolant_distribution__blue_coolant_hose_6_elbow_0",
+        "m__utilities_coolant_distribution__blue_coolant_hose_6_elbow_1"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "utilities_rear_power_cabinet",
+      "parent_id": "utilities",
+      "node_name": "p__utilities_rear_power_cabinet",
+      "label_zh": "后部电源与伺服机柜",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "utilities",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -3.83999991,
+          0.22000003,
+          0.1099999
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.4,
+        0.2,
+        -0.6
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__utilities_rear_power_cabinet__power_rack",
+        "m__utilities_rear_power_cabinet__power_rack_captive_screws",
+        "m__utilities_rear_power_cabinet__power_rack_handle",
+        "m__utilities_rear_power_cabinet__rack_seam",
+        "m__utilities_rear_power_cabinet__status_LED",
+        "m__utilities_rear_power_cabinet__rack_seam_02",
+        "m__utilities_rear_power_cabinet__status_LED_02",
+        "m__utilities_rear_power_cabinet__rack_seam_03",
+        "m__utilities_rear_power_cabinet__status_LED_03",
+        "m__utilities_rear_power_cabinet__rack_seam_04",
+        "m__utilities_rear_power_cabinet__status_LED_04",
+        "m__utilities_rear_power_cabinet__rack_seam_05",
+        "m__utilities_rear_power_cabinet__status_LED_05",
+        "m__utilities_rear_power_cabinet__rack_seam_06",
+        "m__utilities_rear_power_cabinet__status_LED_06",
+        "m__utilities_rear_power_cabinet__rack_seam_07",
+        "m__utilities_rear_power_cabinet__status_LED_07",
+        "m__utilities_rear_power_cabinet__rack_seam_08",
+        "m__utilities_rear_power_cabinet__status_LED_08",
+        "m__utilities_rear_power_cabinet__rack_seam_09",
+        "m__utilities_rear_power_cabinet__status_LED_09"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "vacuum_foreline_bellows",
+      "parent_id": "vacuum",
+      "node_name": "p__vacuum_foreline_bellows",
+      "label_zh": "隔振波纹管与前级抽气接口",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "vacuum",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.07999992,
+          -1.07000005,
+          -0.16999996
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.3,
+        -0.06,
+        -0.48
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__vacuum_foreline_bellows__foreline_run_0",
+        "m__vacuum_foreline_bellows__foreline_run_1",
+        "m__vacuum_foreline_bellows__foreline_run_2",
+        "m__vacuum_foreline_bellows__foreline_elbow_0",
+        "m__vacuum_foreline_bellows__foreline_elbow_1",
+        "m__vacuum_foreline_bellows__flexible_bellows",
+        "m__vacuum_foreline_bellows__flexible_bellows_02",
+        "m__vacuum_foreline_bellows__flexible_bellows_03",
+        "m__vacuum_foreline_bellows__flexible_bellows_04",
+        "m__vacuum_foreline_bellows__flexible_bellows_05",
+        "m__vacuum_foreline_bellows__flexible_bellows_06",
+        "m__vacuum_foreline_bellows__flexible_bellows_07",
+        "m__vacuum_foreline_bellows__flexible_bellows_08",
+        "m__vacuum_foreline_bellows__flexible_bellows_09",
+        "m__vacuum_foreline_bellows__flexible_bellows_10",
+        "m__vacuum_foreline_bellows__flexible_bellows_11",
+        "m__vacuum_foreline_bellows__flexible_bellows_12",
+        "m__vacuum_foreline_bellows__flexible_bellows_13",
+        "m__vacuum_foreline_bellows__flexible_bellows_14"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "source_laser_transport_interface",
+      "parent_id": "source",
+      "node_name": "p__source_laser_transport_interface",
+      "label_zh": "CO2驱动激光传输与锡滴供给接口",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "source",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.68000007,
+          -0.89999998
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.2,
+        0.25,
+        -0.5
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__source_laser_transport_interface__beam_delivery_housing",
+        "m__source_laser_transport_interface__laser_delivery_tube_run_0",
+        "m__source_laser_transport_interface__laser_delivery_tube_run_1",
+        "m__source_laser_transport_interface__laser_delivery_tube_elbow_0",
+        "m__source_laser_transport_interface__co2_service_tag"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_fixed_frame",
+      "parent_id": "wafer_stage_base",
+      "node_name": "p__metrology_fixed_frame",
+      "label_zh": "固定计量基准梁",
+      "description_zh": "所有干涉头和零位检测组件固定于基座；其位置不随A/B台交换。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.05,
+          0.22999996,
+          0.03000003
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.03,
+        -0.1
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_fixed_frame__reference_pedestal",
+        "m__metrology_fixed_frame__reference_pedestal_02",
+        "m__metrology_fixed_frame__rear_reference_mount",
+        "m__metrology_fixed_frame__rear_reference_mount_02"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_ifm_measure_x",
+      "parent_id": "metrology_fixed_frame",
+      "node_name": "p__metrology_ifm_measure_x",
+      "label_zh": "量测位 X 向固定激光干涉仪",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -1.79000008,
+          0.27499998,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.04,
+        -0.15
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_ifm_measure_x__machined_housing",
+        "m__metrology_ifm_measure_x__measurement_window",
+        "m__metrology_ifm_measure_x__window_bezel",
+        "m__metrology_ifm_measure_x__reference_arm_cover",
+        "m__metrology_ifm_measure_x__cover_screws",
+        "m__metrology_ifm_measure_x__fiber_to_base_run_0"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_ifm_measure_y",
+      "parent_id": "metrology_fixed_frame",
+      "node_name": "p__metrology_ifm_measure_y",
+      "label_zh": "量测位 Y 向固定激光干涉仪",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -1.01999998,
+          0.27499998,
+          -1.11000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.04,
+        -0.15
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_ifm_measure_y__machined_housing",
+        "m__metrology_ifm_measure_y__measurement_window",
+        "m__metrology_ifm_measure_y__window_bezel",
+        "m__metrology_ifm_measure_y__reference_arm_cover",
+        "m__metrology_ifm_measure_y__cover_screws",
+        "m__metrology_ifm_measure_y__fiber_to_base_run_0"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_ifm_exposure_x",
+      "parent_id": "metrology_fixed_frame",
+      "node_name": "p__metrology_ifm_exposure_x",
+      "label_zh": "曝光位 X 向固定激光干涉仪",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.27999997,
+          0.27499998,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.04,
+        -0.15
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_ifm_exposure_x__machined_housing",
+        "m__metrology_ifm_exposure_x__measurement_window",
+        "m__metrology_ifm_exposure_x__window_bezel",
+        "m__metrology_ifm_exposure_x__reference_arm_cover",
+        "m__metrology_ifm_exposure_x__cover_screws",
+        "m__metrology_ifm_exposure_x__fiber_to_base_run_0"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_ifm_exposure_y",
+      "parent_id": "metrology_fixed_frame",
+      "node_name": "p__metrology_ifm_exposure_y",
+      "label_zh": "曝光位 Y 向固定激光干涉仪",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          1.04999995,
+          0.27499998,
+          -1.11000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.04,
+        -0.15
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_ifm_exposure_y__machined_housing",
+        "m__metrology_ifm_exposure_y__measurement_window",
+        "m__metrology_ifm_exposure_y__window_bezel",
+        "m__metrology_ifm_exposure_y__reference_arm_cover",
+        "m__metrology_ifm_exposure_y__cover_screws",
+        "m__metrology_ifm_exposure_y__fiber_to_base_run_0"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "stage_a_mirror_x",
+      "parent_id": "wafer_chuck",
+      "node_name": "p__stage_a_mirror_x",
+      "label_zh": "A 台 X 向随动平面镜",
+      "description_zh": "长440mm、高50mm、厚10mm的侧面教学反射镜；随工件台一起运动。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.40700001,
+          -0.12,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.07,
+        0.0,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__stage_a_mirror_x__aluminium_mirror_mount",
+        "m__stage_a_mirror_x__plane_reflective_face"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "stage_a_mirror_y",
+      "parent_id": "wafer_chuck",
+      "node_name": "p__stage_a_mirror_y",
+      "label_zh": "A 台 Y 向随动平面镜",
+      "description_zh": "长440mm、高50mm、厚10mm的侧面教学反射镜；随工件台一起运动。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          -0.12,
+          -0.36300001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.0,
+        -0.07
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__stage_a_mirror_y__aluminium_mirror_mount",
+        "m__stage_a_mirror_y__plane_reflective_face"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "stage_a_corner_cube_1",
+      "parent_id": "wafer_chuck",
+      "node_name": "p__stage_a_corner_cube_1",
+      "label_zh": "A 台角锥反射镜 1",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.565,
+          -0.21499991,
+          -0.24000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.02825,
+        0.025,
+        -0.012
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__stage_a_corner_cube_1__orthogonal_reflection_0",
+        "m__stage_a_corner_cube_1__orthogonal_reflection_1",
+        "m__stage_a_corner_cube_1__orthogonal_reflection_2",
+        "m__stage_a_corner_cube_1__retaining_ring",
+        "m__stage_a_corner_cube_1__side_mount"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "stage_a_corner_cube_2",
+      "parent_id": "wafer_chuck",
+      "node_name": "p__stage_a_corner_cube_2",
+      "label_zh": "A 台角锥反射镜 2",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.565,
+          -0.21499991,
+          0.24000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.02825,
+        0.025,
+        0.012
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__stage_a_corner_cube_2__orthogonal_reflection_0",
+        "m__stage_a_corner_cube_2__orthogonal_reflection_1",
+        "m__stage_a_corner_cube_2__orthogonal_reflection_2",
+        "m__stage_a_corner_cube_2__retaining_ring",
+        "m__stage_a_corner_cube_2__side_mount"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "stage_a_corner_cube_3",
+      "parent_id": "wafer_chuck",
+      "node_name": "p__stage_a_corner_cube_3",
+      "label_zh": "A 台角锥反射镜 3",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.565,
+          -0.21499991,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.02825,
+        0.025,
+        -0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__stage_a_corner_cube_3__orthogonal_reflection_0",
+        "m__stage_a_corner_cube_3__orthogonal_reflection_1",
+        "m__stage_a_corner_cube_3__orthogonal_reflection_2",
+        "m__stage_a_corner_cube_3__retaining_ring",
+        "m__stage_a_corner_cube_3__side_mount"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "stage_b_mirror_x",
+      "parent_id": "wafer_stage_dual_bed",
+      "node_name": "p__stage_b_mirror_x",
+      "label_zh": "B 台 X 向随动平面镜",
+      "description_zh": "长440mm、高50mm、厚10mm的侧面教学反射镜；随工件台一起运动。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.40700001,
+          0.01999998,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.07,
+        0.0,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__stage_b_mirror_x__aluminium_mirror_mount",
+        "m__stage_b_mirror_x__plane_reflective_face"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "stage_b_mirror_y",
+      "parent_id": "wafer_stage_dual_bed",
+      "node_name": "p__stage_b_mirror_y",
+      "label_zh": "B 台 Y 向随动平面镜",
+      "description_zh": "长440mm、高50mm、厚10mm的侧面教学反射镜；随工件台一起运动。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.0,
+          0.01999998,
+          -0.36300001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        0.0,
+        -0.07
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__stage_b_mirror_y__aluminium_mirror_mount",
+        "m__stage_b_mirror_y__plane_reflective_face"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "stage_b_corner_cube_1",
+      "parent_id": "wafer_stage_dual_bed",
+      "node_name": "p__stage_b_corner_cube_1",
+      "label_zh": "B 台角锥反射镜 1",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.565,
+          -0.07499993,
+          -0.24000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.02825,
+        0.025,
+        -0.012
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__stage_b_corner_cube_1__orthogonal_reflection_0",
+        "m__stage_b_corner_cube_1__orthogonal_reflection_1",
+        "m__stage_b_corner_cube_1__orthogonal_reflection_2",
+        "m__stage_b_corner_cube_1__retaining_ring",
+        "m__stage_b_corner_cube_1__side_mount"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "stage_b_corner_cube_2",
+      "parent_id": "wafer_stage_dual_bed",
+      "node_name": "p__stage_b_corner_cube_2",
+      "label_zh": "B 台角锥反射镜 2",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          -0.565,
+          -0.07499993,
+          0.24000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        -0.02825,
+        0.025,
+        0.012
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__stage_b_corner_cube_2__orthogonal_reflection_0",
+        "m__stage_b_corner_cube_2__orthogonal_reflection_1",
+        "m__stage_b_corner_cube_2__orthogonal_reflection_2",
+        "m__stage_b_corner_cube_2__retaining_ring",
+        "m__stage_b_corner_cube_2__side_mount"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "stage_b_corner_cube_3",
+      "parent_id": "wafer_stage_dual_bed",
+      "node_name": "p__stage_b_corner_cube_3",
+      "label_zh": "B 台角锥反射镜 3",
+      "description_zh": "虚构教学设备；外形、尺寸与内部布局均为教学示意。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "public_principle",
+      "rest_local_transform": {
+        "position": [
+          0.56500006,
+          -0.07499993,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.02825,
+        0.025,
+        -0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__stage_b_corner_cube_3__orthogonal_reflection_0",
+        "m__stage_b_corner_cube_3__orthogonal_reflection_1",
+        "m__stage_b_corner_cube_3__orthogonal_reflection_2",
+        "m__stage_b_corner_cube_3__retaining_ring",
+        "m__stage_b_corner_cube_3__side_mount"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_psd_measure_1",
+      "parent_id": "metrology_fixed_frame",
+      "node_name": "p__metrology_psd_measure_1",
+      "label_zh": "量测位零位光源与PSD接收器 1",
+      "description_zh": "20×20×8mm接收模块加独立照明窗；固定基座，四象限符号为教学图形，不能把PSD当作激光器。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -1.58500004,
+          0.01200002,
+          -0.24000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.025,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_psd_measure_1__recessed_receiver_body",
+        "m__metrology_psd_measure_1__quadrant_window",
+        "m__metrology_psd_measure_1__quadrant_window_02",
+        "m__metrology_psd_measure_1__quadrant_window_03",
+        "m__metrology_psd_measure_1__quadrant_window_04",
+        "m__metrology_psd_measure_1__independent_illumination_window",
+        "m__metrology_psd_measure_1__flush_mount_pad"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_psd_measure_2",
+      "parent_id": "metrology_fixed_frame",
+      "node_name": "p__metrology_psd_measure_2",
+      "label_zh": "量测位零位光源与PSD接收器 2",
+      "description_zh": "20×20×8mm接收模块加独立照明窗；固定基座，四象限符号为教学图形，不能把PSD当作激光器。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -1.58500004,
+          0.01200002,
+          0.24000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.025,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_psd_measure_2__recessed_receiver_body",
+        "m__metrology_psd_measure_2__quadrant_window",
+        "m__metrology_psd_measure_2__quadrant_window_02",
+        "m__metrology_psd_measure_2__quadrant_window_03",
+        "m__metrology_psd_measure_2__quadrant_window_04",
+        "m__metrology_psd_measure_2__independent_illumination_window",
+        "m__metrology_psd_measure_2__flush_mount_pad"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_psd_measure_3",
+      "parent_id": "metrology_fixed_frame",
+      "node_name": "p__metrology_psd_measure_3",
+      "label_zh": "量测位零位光源与PSD接收器 3",
+      "description_zh": "20×20×8mm接收模块加独立照明窗；固定基座，四象限符号为教学图形，不能把PSD当作激光器。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          -0.45499998,
+          0.01200002,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.025,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_psd_measure_3__recessed_receiver_body",
+        "m__metrology_psd_measure_3__quadrant_window",
+        "m__metrology_psd_measure_3__quadrant_window_02",
+        "m__metrology_psd_measure_3__quadrant_window_03",
+        "m__metrology_psd_measure_3__quadrant_window_04",
+        "m__metrology_psd_measure_3__independent_illumination_window",
+        "m__metrology_psd_measure_3__flush_mount_pad"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_psd_exposure_1",
+      "parent_id": "metrology_fixed_frame",
+      "node_name": "p__metrology_psd_exposure_1",
+      "label_zh": "曝光位零位光源与PSD接收器 1",
+      "description_zh": "20×20×8mm接收模块加独立照明窗；固定基座，四象限符号为教学图形，不能把PSD当作激光器。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.48500001,
+          0.01200002,
+          -0.24000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.025,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_psd_exposure_1__recessed_receiver_body",
+        "m__metrology_psd_exposure_1__quadrant_window",
+        "m__metrology_psd_exposure_1__quadrant_window_02",
+        "m__metrology_psd_exposure_1__quadrant_window_03",
+        "m__metrology_psd_exposure_1__quadrant_window_04",
+        "m__metrology_psd_exposure_1__independent_illumination_window",
+        "m__metrology_psd_exposure_1__flush_mount_pad"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_psd_exposure_2",
+      "parent_id": "metrology_fixed_frame",
+      "node_name": "p__metrology_psd_exposure_2",
+      "label_zh": "曝光位零位光源与PSD接收器 2",
+      "description_zh": "20×20×8mm接收模块加独立照明窗；固定基座，四象限符号为教学图形，不能把PSD当作激光器。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          0.48500001,
+          0.01200002,
+          0.24000001
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.025,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_psd_exposure_2__recessed_receiver_body",
+        "m__metrology_psd_exposure_2__quadrant_window",
+        "m__metrology_psd_exposure_2__quadrant_window_02",
+        "m__metrology_psd_exposure_2__quadrant_window_03",
+        "m__metrology_psd_exposure_2__quadrant_window_04",
+        "m__metrology_psd_exposure_2__independent_illumination_window",
+        "m__metrology_psd_exposure_2__flush_mount_pad"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    },
+    {
+      "part_id": "metrology_psd_exposure_3",
+      "parent_id": "metrology_fixed_frame",
+      "node_name": "p__metrology_psd_exposure_3",
+      "label_zh": "曝光位零位光源与PSD接收器 3",
+      "description_zh": "20×20×8mm接收模块加独立照明窗；固定基座，四象限符号为教学图形，不能把PSD当作激光器。",
+      "kind": "component",
+      "subsystem": "wafer_stage",
+      "layout_basis": "educational_layout",
+      "rest_local_transform": {
+        "position": [
+          1.61500001,
+          0.01200002,
+          -0.0
+        ],
+        "rotation_quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explode_vector": [
+        0.0,
+        -0.025,
+        0.0
+      ],
+      "pivot": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "motion": "fixed"
+      },
+      "mesh_nodes": [
+        "m__metrology_psd_exposure_3__recessed_receiver_body",
+        "m__metrology_psd_exposure_3__quadrant_window",
+        "m__metrology_psd_exposure_3__quadrant_window_02",
+        "m__metrology_psd_exposure_3__quadrant_window_03",
+        "m__metrology_psd_exposure_3__quadrant_window_04",
+        "m__metrology_psd_exposure_3__independent_illumination_window",
+        "m__metrology_psd_exposure_3__flush_mount_pad"
+      ],
+      "collision": {
+        "type": "box",
+        "source": "local_mesh_aabb"
+      },
+      "parameter_bindings": []
+    }
+  ]
+}
